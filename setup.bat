@@ -53,8 +53,19 @@ echo Installation terminee avec succes!
 echo ================================
 echo.
 
+echo Recherche de toolraid.py...
+for /r "C:\" %%f in (toolraid.py) do (
+    set "toolraid=%%f"
+    goto :found
+)
+
+echo Erreur: toolraid.py introuvable sur le disque.
+pause
+exit /b 1
+
+:found
+echo Fichier trouve: %toolraid%
 echo Lancement de toolraid.py...
-cd /d "C:\Users\thebo\Desktop\raid bot tool"
-python toolraid.py
+python "%toolraid%"
 
 pause
