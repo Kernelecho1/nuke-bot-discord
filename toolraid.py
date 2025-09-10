@@ -5,41 +5,12 @@ from colorama import init, Fore, Style
 import getpass
 import subprocess
 import sys
+import time
 
 init(autoreset=True)
 
 
-ASCII_ART_3 = """
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠐⡈⠐⠠⢁⠂⠐⢀⣾⣿⡿⠿⠿⠿⣿⣿⣿⣿⣿⡿⠟⠛⠛⠿⣷⡄⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠐⠠⢁⠂⠄⠀⣛⠀⡟⢁⣠⣄⠀⠀⠀⠙⢻⡟⠉⠀⠀⢀⣴⣦⣬⠃⣬⣅⠀⢂⠐⡀⢂⠐⠠⠀⠄⠠⠀⠄⠠⢀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⡁⢂⠈⠀⠾⡛⢱⡿⢿⣿⣿⣿⣦⣄⣠⣼⣷⣤⣤⣶⠿⠿⢿⣟⠆⢉⡛⠆⠀⢂⠐⠠⠈⠄⠡⠈⠄⠡⢈⠐⡀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⡐⢀⠂⢠⣾⡟⣸⣰⡿⠁⠀⠀⠙⣿⡇⣿⣿⠸⣿⠁⢀⣀⣀⣙⡸⠎⢿⡆⠀⠂⠌⠠⠁⠌⠠⠁⠌⡐⢀⠂⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠠⠀⠄⠀⠟⡸⢛⣤⣼⣿⣿⣿⣤⣼⠇⣿⣿⠀⢧⣿⣿⣿⣿⣿⣿⣧⣄⠃⠀⢃⠘⡀⢃⠘⡀⠃⠄⠠⢀⠘⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⢂⠡⠈⠄⢈⡾⠋⢹⣿⣿⣿⣿⡟⢡⣴⣿⣿⣷⣦⡙⢿⣿⣿⣿⣿⠀⠙⠀⠈⡀⢂⠐⡀⠂⠄⠡⢈⠐⡀⠂⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠄⢂⠡⠀⢸⠀⠀⢸⣿⣿⣿⣿⡀⣿⣿⣿⣿⣿⣿⡇⠸⢿⣿⣿⡟⠀⠀⠀⠀⡐⢀⠂⠄⠡⢈⠐⡀⢂⠐⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠈⠄⡐⠠⠀⠀⠀⠀⠙⠋⠉⠀⠀⠉⠉⠙⠛⠋⠉⠀⠀⠀⠀⠁⠀⠀⠀⠀⢀⠐⠠⠈⠄⡁⢂⠐⡀⠂⠄⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⢈⠐⠠⠁⠄⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⢀⣀⠀⠀⢀⠂⠌⠠⢁⠂⡐⢀⠂⠄⠡⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠠⠈⠄⠡⢈⠐⡀⠸⣿⣦⡀⠀⠀⠛⠒⠚⠛⠛⠛⠛⠀⢀⣴⣿⠃⠀⠌⡀⠂⠌⡐⢀⠂⡐⠠⠈⠄⡁⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠡⢈⠐⡀⠂⠄⠀⢻⣿⣿⣷⣶⣦⣤⣤⣤⣤⣤⣶⣾⣿⣿⡿⠀⠐⠠⢀⠁⢂⠐⡀⠂⠄⠡⢈⠐⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠈⡐⢀⠂⠄⠡⠈⠄⠘⣿⣿⠿⣿⣿⣿⣿⣿⣿⣿⣿⡟⣿⡿⠃⠀⠌⡐⠠⠈⠄⠂⠄⠡⢈⠐⠠⠈⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⡐⠠⠈⠄⠡⢈⠐⠀⠀⠙⠃⣿⣿⣿⣿⣿⣿⣿⣿⡗⠋⠀⣤⠀⠀⠀⠡⠈⠄⠡⢈⠐⠠⠈⠄⡁⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠄⠡⠈⠄⡁⠂⠀⠀⣤⡀⠀⢻⣿⣿⣿⣿⣿⣿⣿⠇⣠⣾⣿⠀⣰⠀⠀⠀⣈⡀⠀⠈⠀⠁⠂⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⡈⠄⠁⠂⠀⠀⠀⠀⢻⣿⣷⠬⠉⠉⠉⠉⠉⠉⠀⠚⢿⣿⣿⢀⣿⡀⠀⠀⢹⣿⣿⣿⣿⣶⡶⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⠀⠀⠀⠀⢸⣧⠘⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡇⣾⣿⡇⠀⠁⠀⢻⣿⣿⣿⣿⠇⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⢸⣟⡿⠀⠀⠀⠀⣿⣿⣦⠘⣿⣶⠖⣠⠆⠀⠀⢳⣤⡙⢿⣟⣼⣿⣿⡇⠀⠐⡀⠈⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠘⣿⠃⠀⠀⠀⠀⢿⣿⣿⣷⣌⣿⣾⠏⠀⡀⠀⠸⡿⠿⠾⠿⠿⠿⠿⠷⠀⠀⠄⠀⠸⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⢠⠀⠀⠈⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡄⢠⠀⡄⣴⠀⠀⡄⠐⠀⠀⢻⣿⠁⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠠⠀⠀⠀⠀⢀⠀⠠⠀⠄⢂⠐⠠⢈⠐⡈⠐⡀⢂⠐⠘⢷⡭⠂⠄⡁⢂⠀⠈⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠡⠐⠠⠈⡐⠠⠈⠄⠡⠈⠄⡈⠐⡀⠂⠄⠡⠐⠠⠨⠄⠆⠠⠌⠠⠐⠠⢀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⣿⡿⠿⠿⠀⣼⡿⠿⣿⡆⢠⣿⠿⢿⣷⠀⣼⡿⠿⣿⡆⢸⣿⠀⣿⡿⠿⠿⠀⠾⢿⣿⠿⠇⠘⣿⡄⣰⡿⠁⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⣿⣧⣤⡄⠀⢿⣧⣤⣤⡁⢨⣿⠀⢀⣿⠀⣿⡇⠀⠀⠁⢸⣿⠀⣿⣧⣤⡄⠀⠀⢸⣿⠀⠀⠀⠘⢿⣿⠁⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⣿⡏⠁⠁⠀⣤⣍⣈⣿⡇⢸⣿⣀⣀⣿⠀⣿⣇⣀⣤⡄⢸⣿⠀⣿⣇⣉⣀⠀⠀⢸⣿⠀⠀⠀⠀⢸⣯⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠛⠃⠀⠀⠀⠙⠛⠛⠛⠁⠀⠛⠛⠛⠋⠀⠘⠛⠛⠛⠁⠘⠛⠀⠛⠛⠛⠛⠀⠀⠘⠛⠀⠀⠀⠀⠘⠋⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-"""
+
 
 ASCII_ART_4 = """
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -80,7 +51,7 @@ ASCII_ART_4 = """
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 """
 
-ascii_counter = 0
+
 
 def clear_screen():
     """Efface l'ecran du terminal"""
@@ -89,17 +60,49 @@ def clear_screen():
     else:  
         os.system('clear')
 
+def typing_effect(text, delay=0.005):
+    """Affiche le texte avec un effet de frappe"""
+    for char in text:
+        print(Fore.RED + char, end='', flush=True)
+        time.sleep(delay)
+    print()
+
+def fade_in_text(text, steps=5, delay=0.02):
+    """Effet de fade-in pour le texte"""
+    for i in range(steps):
+        clear_screen()
+        print(Fore.RED + text)
+        time.sleep(delay)
+
+def loading_animation(text="Chargement", duration=0.5):
+    """Animation de chargement"""
+    chars = "⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏"
+    end_time = time.time() + duration
+    i = 0
+    while time.time() < end_time:
+        print(f"\r{Fore.RED}{chars[i % len(chars)]} {text}...", end='', flush=True)
+        time.sleep(0.02)
+        i += 1
+    print(f"\r{Fore.RED}✓ {text} terminé!   ")
+    time.sleep(0.1)
+
 def show_ascii():
-    """Affiche l'ASCII art en rouge - alterne entre les 2 ASCII arts disponibles"""
-    global ascii_counter
-    ascii_counter += 1
-
-    if ascii_counter % 2 == 1:
-        print(Fore.RED + ASCII_ART_3)
-    else:
-        print(Fore.RED + ASCII_ART_4)
-
-    print(Fore.RED + '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
+    """Affiche l'ASCII art 4 en rouge avec animation"""
+    for i in range(3):
+        clear_screen()
+        time.sleep(0.1)
+    
+    lines = ASCII_ART_4.split('\n')
+    
+    for line in lines:
+        print(Fore.RED + line)
+        time.sleep(0.05)
+    
+    separator = '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━'
+    for i in range(len(separator)):
+        print(f"\r{Fore.RED}{separator[:i+1]}", end='', flush=True)
+        time.sleep(0.005)
+    print()
 
 class DiscordBot(discord.Client):
     def __init__(self, *args, **kwargs):
@@ -108,34 +111,42 @@ class DiscordBot(discord.Client):
 
     async def on_ready(self):
         clear_screen()
-        print(Fore.RED + f'Bot connecte en tant que {self.user}!')
+        loading_animation("Connexion au bot", 0.3)
+        clear_screen()
+        
+        typing_effect(f'Bot connecte en tant que {self.user}!', 0.01)
         if self.user:
-            print(Fore.RED + f'ID: {self.user.id}')
+            typing_effect(f'ID: {self.user.id}', 0.01)
 
+        time.sleep(0.1)
         show_ascii()
-        print(Fore.RED + 'Le bot est maintenant en ligne!')
+        typing_effect('Le bot est maintenant en ligne!', 0.01)
+        time.sleep(0.2)
 
         await self.select_server()
-
         await self.command_menu()
 
     def show_servers(self):
-        """Affiche la liste des serveurs disponibles"""
+        """Affiche la liste des serveurs disponibles avec animation"""
         guilds = list(self.guilds)
 
         if not guilds:
             clear_screen()
             show_ascii()
-            print(Fore.RED + "mon reuf t sur aucun serveur")
+            typing_effect("mon reuf t sur aucun serveur", 0.05)
             return None
 
         clear_screen()
+        loading_animation("Chargement des serveurs", 0.2)
+        clear_screen()
         show_ascii()
-        print(Fore.RED + f"Serveurs disponibles ({len(guilds)}):")
+        typing_effect(f"Serveurs disponibles ({len(guilds)}):", 0.01)
+        time.sleep(0.05)
 
         for i, guild in enumerate(guilds, 1):
             member_count = guild.member_count or "?"
-            print(Fore.RED + f"{i}. {guild.name} ({member_count} membres)")
+            typing_effect(f"{i}. {guild.name} ({member_count} membres)", 0.005)
+            time.sleep(0.02)
 
         return guilds
 
@@ -183,34 +194,42 @@ class DiscordBot(discord.Client):
                 print(Fore.RED + f"Erreur: {e}")
 
     async def command_menu(self):
-        """Menu interactif des commandes dans le terminal"""
+        """Menu interactif des commandes dans le terminal avec animations"""
         while True:
             clear_screen()
             show_ascii()
-            print(Fore.RED + "COMMANDES ORGANISEES PAR CATEGORIE")
-            print(Fore.RED + "")
+            typing_effect("COMMANDES ORGANISEES PAR CATEGORIE", 0.01)
+            time.sleep(0.05)
             
-            print(Fore.RED + "┌─────── COLONNE 1 ─────┬─────── COLONNE 2 ─────┬─────── COLONNE 3 ─────┐")
-            print(Fore.RED + "│ 1. nuke - Destruction │ 7. delemojis - Sup    │ 13. leave - Faire     │")
-            print(Fore.RED + "│    totale du serveur  │    tous les emojis    │     quitter le bot    │")
-            print(Fore.RED + "│                       │                       │                       │")
-            print(Fore.RED + "│ 2. alladmin - Donner  │ 8. dm - Message prive │ 14. rename - Renommer │")
-            print(Fore.RED + "│    admin a tous       │    a une personne     │     le serveur        │")
-            print(Fore.RED + "│                       │                       │                       │")
-            print(Fore.RED + "│ 3. banall - Bannir    │ 9. dmall - Message    │ 15. randomban - Ban   │")
-            print(Fore.RED + "│    tous les membres   │    prive a tous       │     membre aleatoire  │")
-            print(Fore.RED + "│                       │                       │                       │")
-            print(Fore.RED + "│ 4. kickall - Kicker   │ 10. spam - Spammer   │ 16. randomkick - Kick │")
-            print(Fore.RED + "│    tous les membres   │     dans tous salons  │     membre aleatoire  │")
-            print(Fore.RED + "│                       │                       │                       │")
-            print(Fore.RED + "│ 5. delchans - Sup     │ 11. create - Creer    │ 17. pub - pub tout le │")
-            print(Fore.RED + "│    tous les salons    │     salons ou roles   │     serveur tkt pas   │")
-            print(Fore.RED + "│                       │                       │     c cool            │")
-            print(Fore.RED + "│ 6. delroles - Sup     │ 12. kickbots - Kicker │ 18. webhook - Creer   │")
-            print(Fore.RED + "│    tous les roles     │     tous les bots     │     webhook et spam   │")
-            print(Fore.RED + "└───────────────────────┴───────────────────────┴───────────────────────┘")
-            print(Fore.RED + "")
-            print(Fore.RED + "Touches: b = Retour | q = Quitter")
+            menu_lines = [
+                "┌─────── COLONNE 1 ─────┬─────── COLONNE 2 ─────┬─────── COLONNE 3 ─────┐",
+                "│ 1. nuke - Destruction │ 7. delemojis - Sup    │ 13. leave - Faire     │",
+                "│    totale du serveur  │    tous les emojis    │     quitter le bot    │",
+                "│                       │                       │                       │",
+                "│ 2. alladmin - Donner  │ 8. dm - Message prive │ 14. rename - Renommer │",
+                "│    admin a tous       │    a une personne     │     le serveur        │",
+                "│                       │                       │                       │",
+                "│ 3. banall - Bannir    │ 9. dmall - Message    │ 15. randomban - Ban   │",
+                "│    tous les membres   │    prive a tous       │     membre aleatoire  │",
+                "│                       │                       │                       │",
+                "│ 4. kickall - Kicker   │ 10. spam - Spammer   │ 16. randomkick - Kick │",
+                "│    tous les membres   │     dans tous salons  │     membre aleatoire  │",
+                "│                       │                       │                       │",
+                "│ 5. delchans - Sup     │ 11. create - Creer    │ 17. pub - pub tout le │",
+                "│    tous les salons    │     salons ou roles   │     serveur tkt pas   │",
+                "│                       │                       │     c cool            │",
+                "│ 6. delroles - Sup     │ 12. kickbots - Kicker │ 18. webhook - Creer   │",
+                "│    tous les roles     │     tous les bots     │     webhook et spam   │",
+                "└───────────────────────┴───────────────────────┴───────────────────────┘"
+            ]
+            
+            for line in menu_lines:
+                print(Fore.RED + line)
+                time.sleep(0.02)
+            
+            print()
+            typing_effect("Touches: b = Retour | q = Quitter", 0.01)
+            time.sleep(0.05)
 
             try:
                 choice = input(Fore.RED + "Choisissez une commande (1-18, b ou q): ").strip().lower()
@@ -228,16 +247,22 @@ class DiscordBot(discord.Client):
                 elif choice == '1' or choice == 'nuke':
                     clear_screen()
                     show_ascii()
-                    print(Fore.RED + "debut du nuke ...")
+                    typing_effect("INITIALISATION DU NUKE...", 0.01)
+                    loading_animation("Preparation de la destruction", 0.3)
                     await self.delete_all_channels()
-                    print(Fore.RED + "Nuke termine!")
+                    clear_screen()
+                    show_ascii()
+                    typing_effect(" NUKE FINISH ", 0.02)
                     input(Fore.RED + "Appuyez sur Entree pour continuer...")
                 elif choice == '2' or choice == 'alladmin':
                     clear_screen()
                     show_ascii()
-                    print(Fore.RED + "alladmin en cours ...")
+                    typing_effect("ELEVATION DES PRIVILEGES...", 0.01)
+                    loading_animation("Attribution des permissions admin", 0.3)
                     await self.make_everyone_admin()
-                    print(Fore.RED + "Tout le monde est maintenant admin!")
+                    clear_screen()
+                    show_ascii()
+                    typing_effect(" TOUT LE MONDE EST MAINTENANT ADMIN! ", 0.02)
                     input(Fore.RED + "Appuyez sur Entree pour continuer...")
                 elif choice == '3' or choice == 'banall':
                     clear_screen()
@@ -1447,11 +1472,14 @@ class DiscordBot(discord.Client):
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
 
 def get_token():
-    """Demande le token à l'utilisateur"""
+    """Demande le token à l'utilisateur avec animation"""
+    clear_screen()
+    loading_animation("Initialisation du raid bot", 0.4)
     clear_screen()
     show_ascii()
-    print(Fore.RED + "raid bot tools")
-    print(Fore.RED + "Entrez le token de votre bot Discord:")
+    typing_effect("raid bot tools", 0.02)
+    time.sleep(0.1)
+    typing_effect("Entrez le token de votre bot Discord:", 0.01)
 
     token = input(Fore.RED + "Token: ")
     return token.strip()
