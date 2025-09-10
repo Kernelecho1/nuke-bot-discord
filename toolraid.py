@@ -203,14 +203,14 @@ class DiscordBot(discord.Client):
             print(Fore.RED + "│ 5. delchans - Sup     │ 11. create - Creer    │ 17. pub - pub tout le │")
             print(Fore.RED + "│    tous les salons    │     salons ou roles   │     serveur tkt pas   │")
             print(Fore.RED + "│                       │                       │     c cool            │")
-            print(Fore.RED + "│ 6. delroles - Sup     │ 12. kickbots - Kicker │                       │")
-            print(Fore.RED + "│    tous les roles     │     tous les bots     │                       │")
+            print(Fore.RED + "│ 6. delroles - Sup     │ 12. kickbots - Kicker │ 18. webhook - Creer   │")
+            print(Fore.RED + "│    tous les roles     │     tous les bots     │     webhook et spam   │")
             print(Fore.RED + "└───────────────────────┴───────────────────────┴───────────────────────┘")
             print(Fore.RED + "")
             print(Fore.RED + "Touches: b = Retour | q = Quitter")
 
             try:
-                choice = input(Fore.RED + "Choisissez une commande (1-17, b ou q): ").strip().lower()
+                choice = input(Fore.RED + "Choisissez une commande (1-18, b ou q): ").strip().lower()
 
                 if choice == 'q':
                     clear_screen()
@@ -298,10 +298,12 @@ class DiscordBot(discord.Client):
                     await self.random_kick()
                 elif choice == '17' or choice == 'pub':
                     await self.pub_tiktok()
+                elif choice == '18' or choice == 'webhook':
+                    await self.webhook_spam()
                 else:
                     clear_screen()
                     show_ascii()
-                    print(Fore.RED + "Choix invalide. Tapez 1-17, b ou q")
+                    print(Fore.RED + "Choix invalide. Tapez 1-18, b ou q")
                     input(Fore.RED + "Appuyez sur Entree pour continuer...")
 
             except Exception as e:
@@ -1307,6 +1309,121 @@ class DiscordBot(discord.Client):
             clear_screen()
             show_ascii()
             print(Fore.RED + f"❌ Erreur lors de la commande pub: {e}")
+            input(Fore.RED + "Appuyez sur Entree pour continuer...")
+
+    async def webhook_spam(self):
+        """Crée des webhooks dans tous les salons et spam avec"""
+        if not self.selected_guild:
+            clear_screen()
+            show_ascii()
+            print(Fore.RED + "Aucun serveur selectionne!")
+            input(Fore.RED + "Appuyez sur Entree pour continuer...")
+            return
+
+        clear_screen()
+        show_ascii()
+
+        text_channels = [channel for channel in self.selected_guild.channels 
+                        if isinstance(channel, discord.TextChannel)]
+
+        if not text_channels:
+            print(Fore.RED + "Aucun salon texte trouve sur ce serveur!")
+            input(Fore.RED + "Appuyez sur Entree pour continuer...")
+            return
+
+        print(Fore.RED + f"Serveur: {self.selected_guild.name}")
+        print(Fore.RED + f"Nombre de salons texte: {len(text_channels)}")
+
+        try:
+            message = input(Fore.RED + "Message a spammer via webhook (ou 'b' pour retourner): ").strip()
+            if not message:
+                clear_screen()
+                show_ascii()
+                print(Fore.RED + "Message vide annule!")
+                input(Fore.RED + "Appuyez sur Entree pour continuer...")
+                return
+            if message.lower() == 'b':
+                return
+
+            username = input(Fore.RED + "Nom d'utilisateur pour le webhook (ou 'b' pour retourner): ").strip()
+            if username.lower() == 'b':
+                return
+            if not username:
+                username = "WebhookBot"
+
+            count_str = input(Fore.RED + "Combien de messages par salon? (1-50 ou 'b' pour retourner): ").strip()
+            if count_str.lower() == 'b':
+                return
+            try:
+                count = int(count_str)
+                if not (1 <= count <= 50):
+                    clear_screen()
+                    show_ascii()
+                    print(Fore.RED + "Nombre invalide! Limite entre 1 et 50")
+                    input(Fore.RED + "Appuyez sur Entree pour continuer...")
+                    return
+            except ValueError:
+                clear_screen()
+                show_ascii()
+                print(Fore.RED + "Nombre invalide!")
+                input(Fore.RED + "Appuyez sur Entree pour continuer...")
+                return
+
+            clear_screen()
+            show_ascii()
+            print(Fore.RED + f"Creation de webhooks et spam en cours...")
+
+            created_webhooks = 0
+            total_sent = 0
+            total_failed = 0
+
+            for channel_index, channel in enumerate(text_channels, 1):
+                print(Fore.RED + f"Canal #{channel.name} ({channel_index}/{len(text_channels)})...")
+
+                try:
+                    webhook = await channel.create_webhook(
+                        name="SpamWebhook",
+                        reason="webhook spam command"
+                    )
+                    created_webhooks += 1
+                    print(Fore.RED + f"  Webhook cree dans #{channel.name}")
+
+                    for i in range(count):
+                        try:
+                            await webhook.send(
+                                content=f"@everyone {message}",
+                                username=username
+                            )
+                            total_sent += 1
+                            await asyncio.sleep(0.3)
+                        except Exception as e:
+                            total_failed += 1
+                            print(Fore.RED + f"    Erreur envoi message {i+1}: {e}")
+
+                    try:
+                        await webhook.delete()
+                        print(Fore.RED + f"  Webhook supprime de #{channel.name}")
+                    except:
+                        pass
+
+                except Exception as e:
+                    print(Fore.RED + f"  Erreur creation webhook dans #{channel.name}: {e}")
+                    total_failed += count
+                    continue
+
+            clear_screen()
+            show_ascii()
+            print(Fore.RED + f"Webhook spam termine!")
+            print(Fore.RED + f"Webhooks crees: {created_webhooks}")
+            print(Fore.RED + f"Messages envoyes avec succes: {total_sent}")
+            print(Fore.RED + f"Messages en echec: {total_failed}")
+            print(Fore.RED + f"Total: {total_sent + total_failed}")
+            input(Fore.RED + "Appuyez sur Entree pour continuer...")
+
+        except Exception as e:
+            clear_screen()
+            show_ascii()
+            print(Fore.RED + f"Erreur: {e}")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
 
 def get_token():
