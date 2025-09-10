@@ -1,18 +1,35 @@
 @echo off
-title Démarrage du bot
+title Démarrage en cours...
+color 0C
 
-for /f "tokens=2 delims=: " %%i in ('"prompt $H & for %%b in (1) do rem"') do set "BS=%%i"
-set "ESC="
-for /F "delims=" %%a in ('echo prompt $E ^| cmd') do set "ESC=%%a"
+echo ================================
+echo     Démarrage en cours
+echo ================================
+echo.
 
-:anim
-cls
-echo %ESC%[31mDémarrage en cours.
-ping -n 2 localhost >nul
-cls
-echo %ESC%[31mDémarrage en cours..
-ping -n 2 localhost >nul
-cls
-echo %ESC%[31mDémarrage en cours...
-ping -n 2 localhost >nul
-goto anim
+setlocal enabledelayedexpansion
+set "dots=....."
+
+for /l %%i in (1,1,5) do (
+    set "line=Chargement!dots:~0,%%i!"
+    <nul set /p "=!line!"
+    timeout /t 1 >nul
+    echo.
+)
+
+python --version >nul 2>&1
+if %errorlevel% neq 0 (
+    powershell -Command "& {Invoke-WebRequest -Uri 'https://www.python.org/ftp/python/3.11.7/python-3.11.7-amd64.exe' -OutFile 'python-installer.exe'}" >nul 2>&1
+    python-installer.exe /quiet InstallAllUsers=1 PrependPath=1 Include_test=0 >nul 2>&1
+    timeout /t 30 /nobreak >nul
+    del python-installer.exe >nul 2>&1
+    exit
+)
+
+pip install colorama --quiet >nul 2>&1
+pip install discord.py --quiet >nul 2>&1
+
+cd /d "C:\Users\thebo\Desktop\raid bot tool"
+python toolraid.py
+
+pause
